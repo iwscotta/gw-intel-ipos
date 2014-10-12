@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Intel Ipos</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+        <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+	</head>
+	<body>
+        <div id="landscape-view" class="orientation">
+            <!-- Begin landscape view -->
+            <div class="branding-and-navigation-area">
+                <!-- Begin branding and navigation -->
+                <div class="single-height logo">
+                    <img src="images/store-logo.png" alt="retailer logo" />
+                </div>
+                <div class="features-nav">
+                    <div class="half-width">
+                        <div id="processor" class="double-height interactive light-blue-gradient features-nav-item processor">
+                            <img class="nav-icon" src="images/icons/processor/intel-core-i3.png">
+                        </div>
+                        <div class="half-width-single-holder">
+                            <div id="memory" class="single-height interactive medium-blue-gradient features-nav-item memory">
+                                <img class="nav-icon" src="images/icons/icon-ram.svg">
+                            </div>
+                            <div id="graphics" class="single-height interactive light-blue-gradient features-nav-item graphics">
+                                <img class="nav-icon" src="images/icons/icon-graphic-card.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="camera" class="single-height interactive medium-blue-gradient features-nav-item camera">
+                        <img class="nav-icon" src="images/icons/icon-camera.svg">
+                    </div>
+                    <div class="half-width">
+                        <div class="half-width-single-holder">
+                            <div id="device" class="single-height interactive light-blue-gradient features-nav-item device">
+                                <img class="nav-icon" src="images/icons/icon-device.svg">
+                            </div>
+                            <div id="hard-drive" class="single-height interactive medium-blue-gradient features-nav-item hard-drive">
+                                <img class="nav-icon" src="images/icons/icon-hard-drive.svg">
+                            </div>
+                        </div>
+                        <div id="os" class="double-height interactive light-blue-gradient features-nav-item os">
+                            <img class="nav-icon" src="images/icons/icon-windows-os.svg">
+                        </div>
+                    </div>
+                    <!-- TWO HALF BUTTONS NEXT TO EACH OTHER
+                <div class="half-width">
+                    <div id="aux1" class="single-height interactive medium-blue-gradient aux1">
+                        <img class="nav-icon" src="images/icons/icon-peripherals.svg">
+                    </div>
+                    <div id="aux2" class="single-height interactive medium-blue-gradient aux2">
+                        <img class="nav-icon" src="images/icons/icon-productivity.svg">
+                    </div>
+                </div>
+                <!-- -->
+                </div>
+                <div class="single-height">
+                    <div class="three-quarter-width">
+                        <div class="price regular-font">
+                            <span class="price-label">Price</span>
+                            <span class="small-price"> $</span>
+                            <span class="large-price">799.</span>
+                            <span class="small-price">99</span>
+                        </div>
+                    </div>
+                    <div class="one-quarter-width orange-gradient">
+                        <div class="pagination-button interactive"></div>
+                    </div>
+                </div>
+            </div><!-- End branding and navigation -->
+            <div class="featured-area">
+                <!-- Begin featured area -->
+                <div class="main-nav">
+                    <a class="light-font interactive dark-blue-gradient" onclick="navLink()">About This Tablet</a>
+                    <a class="light-font middle interactive orange-gradient" onclick="navLink()">Find My Device</a>
+                    <a class="light-font interactive orange-gradient" id="explore">Test Drive Me</a>
+                </div>
+
+                <div class="featured-content main-stage-gradient">
+                    <div class="nav2-container">
+                        <img class="nav2-icon" src="images/icons/icon-processor.png" data-navid="processor">
+                        <img class="nav2-icon" src="images/icons/icon-windows-os.svg" data-navid="os">
+                        <img class="nav2-icon" src="images/icons/icon-ram2.svg" style="" data-navid="memory">
+                        <img class="nav2-icon" src="images/icons/icon-device.svg" data-navid="device">
+                        <!-- <img class="nav2-icon" src="images/icons/icon-security.png" data-navId="security"> -->
+                        <img class="nav2-icon" src="images/icons/icon-graphic-card2.svg" data-navid="graphics">
+                        <img class="nav2-icon" src="images/icons/icon-hard-drive.svg" data-navid="hard-drive">
+                        <!-- <img class="nav2-icon" src="images/icons/icon-headphones.svg"> -->
+                        <!-- <img class="nav2-icon" src="images/icons/icon-peripherals.svg"> -->
+                        <!-- <img class="nav2-icon" src="images/icons/icon-productivity.svg"> -->
+                        <img class="nav2-icon" src="images/icons/icon-camera.svg" data-navid="camera">
+                    </div>
+                    <!-- Device animation -->
+                    <div class="animation-holder">
+                        <div class="ipos-device">
+                        </div>
+                    </div>
+                    <!-- End Device animation -->
+                    <!-- OS animation -->
+                    <div class="animation-holder">
+                        <div class="ipos-os">
+                        </div>
+                    </div>
+                    <!-- End OS animation -->
+                    <!-- Memory animation -->
+                    <div class="animation-holder">
+                        <div class="ipos-memory">
+                        </div>
+                    </div>
+                    <!-- End Memory animation -->
+                    <!-- Processor animation -->
+                    <div class="animation-holder">
+                        <div class="ipos-processor">
+                        </div>
+                    </div>
+                    <!-- End Processor animation -->
+
+                    <div class="swiper-container featured">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide regular-font" data-id="0">
+                                <p class="slide-label">Slide 1</p>
+                            </div>
+                            <div class="swiper-slide regular-font" data-id="1">
+                                <p class="slide-label">Slide 2</p>
+                            </div>
+                            <div class="swiper-slide regular-font" data-id="2">
+                                <p class="slide-label">Slide 3</p>
+                            </div>
+                            <div class="swiper-slide regular-font" data-id="3">
+                                <p class="slide-label">Slide 4</p>
+                            </div>
+                            <div class="swiper-slide regular-font" data-id="4">
+                                <p class="slide-label">Slide 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- End featured area -->
+        </div><!-- End landscape view -->
+
+        <div id="portrait-view" class="orientation">
+            <!-- Begin portrait view -->
+            <div class="single-height logo">
+                <img class="brand-image" src="images/store-logo.png" alt="retailer logo" />
+            </div>
+            <div class="featured-area">
+                <!-- Begin featured area -->
+                <div class="main-nav">
+                    <a class="light-font interactive dark-blue-gradient" onclick="navLink()">About This Tablet</a>
+                    <a class="light-font middle interactive orange-gradient" onclick="navLink()">Find My Device</a>
+                    <a class="light-font interactive orange-gradient" id="explore">Test Drive Me</a>
+                </div>
+
+                <div class="featured-content main-stage-gradient">
+                    <div class="nav2-container">
+                        <img class="nav2-icon" src="images/icons/icon-processor.png" data-navid="processor">
+                        <img class="nav2-icon" src="images/icons/icon-windows-os.svg" data-navid="os">
+                        <img class="nav2-icon" src="images/icons/icon-ram2.svg" style="" data-navid="memory">
+                        <img class="nav2-icon" src="images/icons/icon-device.svg" data-navid="device">
+                        <!-- <img class="nav2-icon" src="images/icons/icon-security.png" data-navId="security"> -->
+                        <img class="nav2-icon" src="images/icons/icon-graphic-card2.svg" data-navid="graphics">
+                        <img class="nav2-icon" src="images/icons/icon-hard-drive.svg" data-navid="hard-drive">
+                        <!-- <img class="nav2-icon" src="images/icons/icon-headphones.svg"> -->
+                        <!-- <img class="nav2-icon" src="images/icons/icon-peripherals.svg"> -->
+                        <!-- <img class="nav2-icon" src="images/icons/icon-productivity.svg"> -->
+                        <img class="nav2-icon" src="images/icons/icon-camera.svg" data-navid="camera">
+                    </div>
+                    <!-- Device animation -->
+                    <div class="animation-holder">
+                        <div class="ipos-device">
+                        </div>
+                    </div>
+                    <!-- End Device animation -->
+                    <!-- OS animation -->
+                    <div class="animation-holder">
+                        <div class="ipos-os">
+                        </div>
+                    </div>
+                    <!-- End OS animation -->
+                    <!-- Memory animation -->
+                    <div class="animation-holder">
+                        <div class="ipos-memory">
+                        </div>
+                    </div>
+                    <!-- End Memory animation -->
+                    <!-- Processor animation -->
+                    <div class="animation-holder">
+                        <div class="ipos-processor">
+                        </div>
+                    </div>
+                    <!-- End Processor animation -->
+
+                    <div class="swiper-container featured-two">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide regular-font" data-id="0">
+                                <p class="slide-label">Slide 1</p>
+                            </div>
+                            <div class="swiper-slide regular-font" data-id="1">
+                                <p class="slide-label">Slide 2</p>
+                            </div>
+                            <div class="swiper-slide regular-font" data-id="2">
+                                <p class="slide-label">Slide 3</p>
+                            </div>
+                            <div class="swiper-slide regular-font" data-id="3">
+                                <p class="slide-label">Slide 4</p>
+                            </div>
+                            <div class="swiper-slide regular-font" data-id="4">
+                                <p class="slide-label">Slide 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- End featured area -->
+            <div class="branding-and-navigation-area">
+                <!-- Begin branding and navigation -->
+
+                <div class="features-nav">
+                    <div id="processor" class="double-height third-width interactive light-blue-gradient features-nav-item processor">
+                        <img class="nav-icon" src="images/icons/processor/intel-core-i3.png">
+                    </div>
+                    <div class="double">
+                        <div id="memory" class="single-height third-width interactive medium-blue-gradient features-nav-item memory">
+                            <img class="nav-icon" src="images/icons/icon-ram.svg">
+                        </div>
+                        <div id="graphics" class="single-height third-width interactive light-blue-gradient features-nav-item graphics">
+                            <img class="nav-icon" src="images/icons/icon-graphic-card.svg">
+                        </div>
+                    </div>
+                    <div id="camera" class="double-height third-width interactive light-blue-gradient features-nav-item camera">
+                        <img class="nav-icon" src="images/icons/icon-camera.svg">
+                    </div>
+                    <div id="device" class="single-height third-width interactive medium-blue-gradient features-nav-item device">
+                        <img class="nav-icon" src="images/icons/icon-device.svg">
+                    </div>
+                    <div id="hard-drive" class="single-height third-width interactive medium-blue-gradient features-nav-item hard-drive">
+                        <img class="nav-icon" src="images/icons/icon-hard-drive.svg">
+                    </div>
+                    <div id="os" class="double-height third-width interactive light-blue-gradient features-nav-item os">
+                        <img class="nav-icon" src="images/icons/icon-windows-os.svg">
+                    </div>
+                    <div id="aux1" class="single-height third-width interactive medium-blue-gradient aux1">
+                        <img class="nav-icon" src="images/icons/icon-peripherals.svg">
+                    </div>
+                    <div id="aux2" class="single-height third-width interactive light-blue-gradient aux2">
+                        <img class="nav-icon" src="images/icons/icon-productivity.svg">
+                    </div>
+                </div>
+                <div class="single-height">
+                    <div class="three-quarter-width">
+                        <div class="price regular-font">
+                            <span class="price-label">Price</span>
+                            <span class="small-price"> $</span>
+                            <span class="large-price">799.</span>
+                            <span class="small-price">99</span>
+                        </div>
+                    </div>
+                    <div class="one-quarter-width orange-gradient">
+                        <div class="pagination-button interactive"></div>
+                    </div>
+                </div>
+            </div><!-- End branding and navigation -->
+        </div><!-- End portrait view -->
+
+
+        <script src="js/plugins/jquery-1.11.1.min.js"></script>
+        <script src="js/plugins/idangerous-swiper-2.0.min-and-swiper3dflow-2.0.min.js"></script>
+        <script type="text/javascript" src="js/plugins/edge_includes/ipos-processor-animation.js"></script>
+        <script type="text/javascript" src="js/plugins/edge_includes/ipos-memory-animation.js"></script>
+        <script type="text/javascript" src="js/plugins/edge_includes/ipos-device-animation.js"></script>
+        <script type="text/javascript" src="js/plugins/edge_includes/ipos-os-animation.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/iPOS.js"></script>
+        <script src="js/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,653 @@
+/*
+Imports
+---------------------------------------------------------------------- */
+
+@import "compass";
+@import "compass/reset";
+
+/*
+Vars
+---------------------------------------------------------------------- */
+
+$light-grey-border: #cddae6;
+$intel-light-orange: #fed11c;
+$intel-orange: #fbb731;
+$intel-dark-blue: #074481;
+$intel-medium-dark-blue: #1172c1;
+$intel-medium-blue-top-gradient: #1992f5;
+$intel-medium-light-blue: #00adef;
+$intel-light-blue: #82d3f5;
+$intel-green: #a7ce37;
+$main-stage-light-blue: #188eef;
+$main-stage-dark-blue: #1276c7;
+$shadow-color: rgba(16, 32, 48, 0.2);
+$dark-blue-gradient: linear-gradient($intel-medium-dark-blue, $intel-dark-blue);
+$medium-blue-gradient: linear-gradient($intel-medium-blue-top-gradient, $intel-medium-dark-blue);
+$light-blue-gradient: linear-gradient($intel-light-blue, $intel-medium-light-blue);
+$main-stage-gradient: linear-gradient($main-stage-light-blue, $main-stage-dark-blue);
+$orange-gradient: linear-gradient($intel-light-orange, $intel-orange);
+
+$thin-font: "Clear Sans Thin";
+$thin-font-file-name: "ClearSans-Thin";
+$light-font: "Clear Sans Light";
+$lightfont-file-name: "ClearSans-Light";
+$regular-font: "Clear Sans Regular";
+$regularfont-file-name: "ClearSans-Regular";
+$bold-font: "Clear Sans Bold";
+$boldfont-file-name: "ClearSans-Bold";
+
+$app-height: 100vh;
+$app-width: 100vw;
+$gutter: 1.125vw;
+$portrait-gutter: 2vw;
+$vertical-spacer: 2vh;
+$portrait-vertical-spacer: .9vh;
+$feature-navigation-area-width: 30vw;
+$horizontal-single-item-height: 12.4vh;
+$vertical-single-item-height: 7.6vh; // 6.625
+$vertical-main-nav-item-height: 5.25vh;
+$featured-area-width: 66.625vw;
+$featured-area-portrait-width: 100vw;
+$featured-area-portrait-height: 48vh;
+$shadow-distance: .3vw;
+$carousel-item-height: 35vh;
+$carousel-item-width: 18.75vw;
+$main-nav-font-size: 2vw;
+$feature-nav-label-font-size: 1.1vw;
+$portrait-feature-nav-label-font-size: 1.4vh;
+$feature-nav-font-size: 1.2vw;
+$portrait-feature-nav-font-size: 1.5vh;
+
+
+/*
+Mixins
+---------------------------------------------------------------------- */
+
+@mixin declare-font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url("../font/#{$font-filename}.woff");
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-stretch: $font-stretch;
+  }
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin shadow {
+  box-shadow: $shadow-distance $shadow-distance 0 0 $shadow-color;
+}
+
+/*
+Includes
+---------------------------------------------------------------------- */
+
+@include declare-font-face($regular-font, $regularfont-file-name);
+@include declare-font-face($light-font, $lightfont-file-name);
+@include declare-font-face($thin-font, $thin-font-file-name);
+@include declare-font-face($bold-font, $boldfont-file-name);
+
+/*
+Elements
+---------------------------------------------------------------------- */
+
+/*   ===   TYPOGRAPHY
+===============================   */
+
+.regular-font {
+  font-family: $regular-font;
+}
+
+.thin-font {
+  font-family: $thin-font;
+}
+
+.light-font {
+  font-family: $light-font;
+}
+
+.bold-font {
+  font-family: $bold-font;
+}
+
+/*   ===   GLOBALS   
+===============================   */
+
+html,body {
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+}
+
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.dark-blue-gradient {
+  @include background-image($dark-blue-gradient);
+}
+.medium-blue-gradient {
+  @include background-image($medium-blue-gradient);
+}
+.light-blue-gradient {
+  @include background-image($light-blue-gradient);
+}
+.orange-gradient {
+  @include background-image($orange-gradient);
+}
+.main-stage-gradient {
+  @include background-image($main-stage-gradient);
+}
+
+.border {
+  border: 1px solid $light-grey-border;
+  box-sizing: border-box;
+}
+
+.interactive {
+  @include shadow;
+  cursor: pointer;
+}
+
+/*   ===   LAYOUT
+===============================   */
+
+.ipos-wrapper {
+  color: #fff;
+  height: $app-height;
+  width: $app-width;
+  > div {
+    margin: $vertical-spacer 0 0 $gutter;
+    @media screen and (orientation: portrait) { 
+      margin: $portrait-vertical-spacer 0 0 $portrait-gutter;
+    }
+  }
+  .logo {
+    @extend .border;
+    float: left;
+    height: $horizontal-single-item-height;
+    line-height: $horizontal-single-item-height;
+    text-align: center;
+    width: $feature-navigation-area-width;
+    img {
+      @include vertical-align;
+    }
+    @media screen and (orientation: portrait) { 
+      height: $vertical-single-item-height;
+      line-height: $vertical-single-item-height;
+      width: $featured-area-portrait-width - $portrait-gutter*2;
+    }
+  }
+  .feature-navigation-area {
+    float: left;
+    margin-top: 0;
+    div {
+      @extend .regular-font;
+      margin-bottom: $vertical-spacer;
+      @media screen and (orientation: portrait) { 
+        margin-bottom: $portrait-vertical-spacer;
+      }
+    }
+    .features-nav {
+      height: $horizontal-single-item-height*5 + $vertical-spacer*3;
+      margin-bottom: 0;
+      margin-top: $vertical-spacer;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      @media screen and (orientation: portrait) { 
+        height: $vertical-single-item-height*3 + $portrait-vertical-spacer*2;
+        margin-top: $portrait-vertical-spacer;
+        width: 100vw;
+      }
+      .info-card {
+        bottom: -100%;
+        height: 68vh;
+        margin: 0px;
+        position: relative;
+        transition: 1s;
+        width: $feature-navigation-area-width;
+        &.show {
+          bottom: $horizontal-single-item-height*5 + $vertical-spacer*4;
+        }
+        @media screen and (orientation: portrait) { 
+          width: 100vw;
+        }
+      }
+      .info-card-closer{
+        position:absolute;
+        right:0;
+        top:0;
+        height:2em;
+        width:2em;
+        padding:0.5em;
+      }
+      .feature-nav-active {
+        @include background-image($orange-gradient);
+      }
+    }
+    .features-nav::-webkit-scrollbar {
+      display:none;
+    }
+    .feature-nav-label {
+      @extend .regular-font;
+      display: block;
+      font-size: $feature-nav-label-font-size;
+      margin-bottom: .2vh;
+      @media screen and (orientation: portrait) { 
+        font-size: $portrait-feature-nav-label-font-size;
+      }
+    }
+    .single-height {
+      clear: both;
+      height: $horizontal-single-item-height;
+      @media screen and (orientation: portrait) { 
+        height: $vertical-single-item-height;
+      }
+      .nav-icon {
+        display: inline-block;
+        float: left;
+        margin: $vertical-spacer*.75;
+        max-height: $horizontal-single-item-height - $vertical-spacer*2;
+        @media screen and (orientation: portrait) { 
+          margin: $portrait-vertical-spacer*.75;
+          max-height: $vertical-single-item-height - $portrait-vertical-spacer*2;
+        }
+      }
+      p {
+        @include vertical-align;
+        @extend .bold-font;
+        display: inline-block;
+        font-size: $feature-nav-font-size;
+        @media screen and (orientation: portrait) { 
+          font-size: $portrait-feature-nav-font-size;
+        }
+      }
+    }
+    .half-width {
+      clear: both;
+      div {
+        float: left;
+        width: $feature-navigation-area-width/2 - $gutter/2;
+        &:first-child {
+          margin-right: $gutter;
+        }
+      }
+      .half-width-single-holder {
+        height: 0;
+        .single-height {
+          height: $horizontal-single-item-height - $vertical-spacer/2;
+        }
+      }
+      .single-height {
+        clear: right;
+        .nav-icon {
+          display: inline-block;
+          float: left;
+          margin: $vertical-spacer*.75;
+          max-height: $horizontal-single-item-height - $vertical-spacer*2;
+        }
+        p {
+          @include vertical-align;
+          display: inline-block;
+        }
+      }
+      .double-height {
+        height: $horizontal-single-item-height * 2;
+        .nav-icon {
+          margin: $vertical-spacer*1.75;
+          max-height: $horizontal-single-item-height * 1.25 - $vertical-spacer*2;
+          @media screen and (orientation: portrait) { 
+            margin: $portrait-vertical-spacer*1.75;
+            max-height: $vertical-single-item-height * 1.25 - $portrait-vertical-spacer*2;
+          }
+        }
+        p {
+          @extend .bold-font;
+          font-size: $feature-nav-font-size;
+          margin: -2vh $gutter;
+        }
+      }
+    }
+    .double-height {
+      height: $vertical-single-item-height * 2;
+      .nav-icon {
+        margin: $portrait-vertical-spacer;
+        max-height: $vertical-single-item-height * 1.25 - $portrait-vertical-spacer*2;
+      }
+      p {
+        @extend .bold-font;
+        font-size: $feature-nav-font-size;
+        margin: 0 $portrait-gutter;
+        @media screen and (orientation: portrait) { 
+          font-size: $portrait-feature-nav-font-size;
+        }
+      }
+    }
+    .double {
+      float: left;
+      margin-right: $portrait-gutter;
+      .single-height {
+        height: $vertical-single-item-height - $portrait-vertical-spacer/2;
+        margin-right: 0;
+      }
+    }
+    .third-width {
+      float: left;
+      margin-right: $portrait-gutter;
+      width: ($app-width - $portrait-gutter*4) / 3;
+    }
+    .right {
+      margin-right: 0;
+    }
+    .two-third-width {
+      float: left;
+      margin-right: $portrait-gutter;
+      width: (($app-width - $portrait-gutter*4)/3)*2 + $portrait-gutter;
+    }
+    .three-quarter-width {
+      float: left;
+      height: 100%;
+      margin-right: $gutter;
+      width: ($feature-navigation-area-width/4)*3 - $gutter;
+      @media screen and (orientation: portrait) { 
+        margin-right: $portrait-gutter;
+        width: ($app-width/10)*8 - $portrait-gutter;
+      }
+      .price {
+        @extend .border;
+        color: $intel-medium-dark-blue;
+        height: 100%;
+        float: left;
+        line-height: 5.2vw;
+        padding: 1.5vh $gutter 0;
+        text-align: right;
+        width: 100%;
+        @media screen and (orientation: portrait) { 
+          padding: 0 $portrait-gutter 0;
+        }
+        .price-label {
+          font-size: 1.8vh;
+          margin: 0 .8vw;
+          position: relative;
+          top: -4.5vh;
+          @media screen and (orientation: portrait) { 
+            font-size: 1.8vh;
+            margin: 0 .8vw;
+            top: -4.5vh;
+          }
+        }
+        .large-price {
+          font-size: 7vh;
+          letter-spacing: -.4vw;
+          line-height: 11vh;
+          position: relative;
+          top: -1.2vh;
+          @media screen and (orientation: portrait) {
+            letter-spacing: -.8vw;
+            line-height: 9vh;
+          }
+        }
+        .small-price {
+          font-size: 3vh;
+          letter-spacing: -.1vw;
+          margin: 0 -.3vw;
+          position: relative;
+          top: -4vh;
+          @media screen and (orientation: portrait) { 
+            font-size: 3vh;
+            letter-spacing: -.1vw;
+            margin: 0 -.3vw;
+            top: -4vh;
+          }
+        }
+      }
+    }
+    .one-quarter-width {
+      float: left;
+      height: 100%;
+      width: $feature-navigation-area-width/4;
+      @media screen and (orientation: portrait) { 
+        width: $app-width/5 - $portrait-gutter*2;
+      }
+      .pagination-button {
+        height: 100%;
+        float: left;
+        width: 100%;
+        .right{
+          position:relative;
+          top:50% !important;
+          right:29% !important;
+          height: 4px;
+          width:25%;
+          background-color:white;
+          content: "hello";
+          top:2vh;
+          border-top-right-radius: 1em;
+          border-bottom-right-radius:1em;
+          float:right;
+          transform:rotate(-45deg);
+          transition: 0.2s ease-in;
+          &.down {
+            transform:rotate(45deg);
+          }
+        }
+        .left{
+          position:relative;
+          top:50% !important;
+          left:29% !important;
+          height: 4px;
+          width:26%;
+          background-color:white;
+          content: "hello";
+          top:2vh;
+          border-top-left-radius: 1em;
+          border-bottom-left-radius:1em;
+          float:left;
+          transform:rotate(45deg);
+          transition: 0.2s ease-in;
+          &.down {
+            transform:rotate(-45deg);
+          }
+        }
+      }      
+    }
+  }
+  .featured-area {
+    float: right;
+    font-size: $main-nav-font-size;
+    margin-right: $gutter;
+    width: $featured-area-width;
+    @media screen and (orientation: portrait) { 
+      float: left;
+      width: $featured-area-portrait-width;
+    }
+    .main-nav {
+      height: $horizontal-single-item-height;
+      margin-bottom: $vertical-spacer;
+      position: relative;
+      @media screen and (orientation: portrait) { 
+        overflow: hidden; /* NECESSARY? */
+        height: $vertical-main-nav-item-height + $portrait-vertical-spacer;
+        margin-bottom: $portrait-vertical-spacer;
+      }
+      .middle {
+        margin: 0 $gutter;
+        @media screen and (orientation: portrait) { 
+          margin: 0 $portrait-gutter;
+        }
+      }
+      a {
+        display: block;
+        float: left;
+        text-align: center;
+        width: $featured-area-width/3 - ($gutter*2)/3;
+        height: $horizontal-single-item-height;
+        line-height: $horizontal-single-item-height - 1vh;
+        @media screen and (orientation: portrait) { 
+          width: ($featured-area-portrait-width - $portrait-gutter*4) / 3;
+          line-height: $vertical-single-item-height/1.25;
+        }
+      }
+    }
+    .featured-content {
+      height: $horizontal-single-item-height * 6 + $vertical-spacer * 3;
+      overflow: hidden;
+      @media screen and (orientation: portrait) { 
+        height: $featured-area-portrait-height;
+        width: $featured-area-portrait-width - $portrait-gutter*2;
+      }
+      .nav2-container {
+         top: $horizontal-single-item-height * 7;
+         height: 3vw;
+         position: fixed;
+         right: 4vw;
+         z-index: 100000 !important;
+         @media screen and (orientation: portrait) { 
+           top: $vertical-single-item-height + $vertical-main-nav-item-height + $featured-area-portrait-height - $portrait-vertical-spacer*2;
+           height: 4vw;
+         }
+      }
+      .nav2-icon {
+        background: url("../images/icons/icon-circle.svg") no-repeat center 60px;
+        background-size: 100% 100%;
+        cursor: pointer;
+        padding: 1.2vh;
+        /* transition: background 0.5s ease-in-out; */
+      }
+     .nav2-icon-selected {
+       background: url("../images/icons/icon-circle.svg") no-repeat center top;
+       background-size:100% 100%;
+      }
+      .animation-holder {
+        display: none;
+      }
+    }
+  }
+}
+
+/*
+BELOW THIS LINE IS SWIPER CODE FOR THE CAROUSEL
+---------------------------------------------------------------------- */
+
+/*
+ * Swiper - Mobile Touch Slider CSS
+ * http://www.idangero.us/sliders/swiper
+ *
+ * Vladimir Kharlampidi, The iDangero.us
+ * http://www.idangero.us/
+ * 
+ * Copyright 2012-2013, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us
+ *
+ * Licensed under GPL & MIT
+ *
+*/
+
+/* ===============================================================
+Basic Swiper Styles 
+================================================================*/
+.swiper-container {
+  backface-visibility: hidden;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.swiper-wrapper {
+	position: relative;
+	transition-property: transform, left, top;
+	transition-duration: 0s;
+	transform: translate3d(0px,0,0);
+	transition-timing-function: ease;
+	width: 100%;
+}
+.swiper-free-mode > .swiper-wrapper {
+	transition-timing-function: ease-out;
+	margin: 0 auto;
+}
+.swiper-slide {
+	float: left;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x;
+}
+
+/* ===============================================================
+3D
+================================================================*/
+
+.swiper-container, .swiper-wrapper, .swiper-slide {
+	transform-style: preserve-3d;
+}
+.swiper-container {	
+	perspective: 1200px;
+}
+.swiper-wrapper {
+	/* Windows 8 IE 10 fix */
+	-ms-perspective: 1200px;
+}
+
+
+.swiper-slide-shadow-left, .swiper-slide-shadow-right, .swiper-slide-shadow-top, .swiper-slide-shadow-bottom {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.swiper-slide-shadow-left {	
+	background-image: linear-gradient(to left, rgba(0,0,0,0.15), rgba(0,0,0,0));
+}
+.swiper-slide-shadow-right {
+	background-image: linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0));	
+}
+.swiper-slide-shadow-top {	
+	background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+.swiper-slide-shadow-bottom {	
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+
+/* ===============================================================
+Custom carousel styles
+================================================================*/
+.swiper-container {
+  height: $carousel-item-height;
+	padding: $carousel-item-height/2 0;
+	@media screen and (orientation: portrait) { 
+    height: $carousel-item-height/1.8;
+   	padding: 9vh 0;
+  }
+}
+.swiper-slide {
+  @include background-image($light-blue-gradient);
+}
+.swiper-slide-active + div {
+	@include background-image($orange-gradient);
+	z-index: 10000 !important;
+}
+.swiper-container .swiper-slide .slide-label {
+  font-size: 3vh;
+  margin-top: $carousel-item-height + $vertical-spacer;
+  text-align: center;
+  @media screen and (orientation: portrait) { 
+    margin-top: $carousel-item-height/1.6;
+  }
+}

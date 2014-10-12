@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<profile xmlVersion="2.21" engineVersion="2.1.0.88">
+  <hardware isEntryLevelNotebook="False" isMobile="False">
+    <chipset northbridgeFamily="Other" smallFormFactor="False">
+      <northbridgeModel>i440FX</northbridgeModel>
+    </chipset>
+    <cpu family="CoreI7" isMobile="False" ultraLowVoltage="False" starRating="5" secondGeneration="False" gen="1" detectionConfidence="100" ultrabook="False" vpro="False" conflictFree="True">
+      <clockSpeed>3.06</clockSpeed>
+      <maxTurboBoost>3.33</maxTurboBoost>
+      <maxBurstSpeed>3.33</maxBurstSpeed>
+      <manufacturer>Intel</manufacturer>
+      <name>Intel® Core™ i7 950</name>
+      <model>950</model>
+    </cpu>
+    <storage>
+      <hdd>1557</hdd>
+      <diskDrives>
+        <drive manufacturer="Intel" type="SSD" capacity="120" />
+        <drive manufacturer="Other" type="Hybrid" capacity="160" cache="32" />
+        <drive manufacturer="Other" type="HDD" capacity="250" />
+      </diskDrives>
+      <ram>6144</ram>
+    </storage>
+    <modems>
+      <modem type="3G">Modem 1</modem>
+      <modem type="3G">Modem 2</modem>
+    </modems>
+    <operatingSystem>
+      <name>Microsoft Windows 7 Ultimate </name>
+      <servicePack></servicePack>
+      <buildNumber>7600</buildNumber>
+      <version>6.1.7600</version>
+      <architecture>64</architecture>
+    </operatingSystem>
+    <graphics intelGraphicsCapability="HDGraphics" inUse="IntelHDGraphics" switchable="False" inUseDescription="VirtualBox Graphics Adapter" wirelessDisplayCapable="False" wirelessDisplayInstalled="False" wirelessDisplayGeneration="">
+      <adapter manufacturer="Other">
+        <name>VirtualBox Graphics Adapter</name>
+        <adapterRam></adapterRam>
+      </adapter>
+    </graphics>
+    <system>
+      <manufacturer>innotek GmbH</manufacturer>
+      <model>VirtualBox</model>
+    </system>
+    <bios>
+      <version>innotek GmbH VirtualBox</version>
+      <date>12/01/2006</date>
+    </bios>
+    <touchscreen hasTouchScreen="False" numberOfTouchScreenPoints="0" />
+    <webCam installed="True" hdCapable="False" />
+    <power hasBattery="False" />
+    <wireless>
+      <adapter family="Wireless" model="Wireless_7260HMW_BN" brand="None">
+        <name>Wireless adapter</name>
+        <frequency1>2.4</frequency1>
+        <frequency2>5.0</frequency2>
+        <supportedStandards>
+          <a>False</a>
+          <b>True</b>
+          <g>True</g>
+          <n>True</n>
+          <ac>True</ac>
+          <widiCapable>True</widiCapable>
+          <bluetooth>False</bluetooth>
+          <wimax>False</wimax>
+        </supportedStandards>
+        <maxSpeed>108</maxSpeed>
+      </adapter>
+      <adapter family="Other" model="Other" brand="None">
+        <name>Wireless adapter</name>
+        <supportedStandards>
+          <wimax>False</wimax>
+        </supportedStandards>
+        <maxSpeed />
+      </adapter>
+    </wireless>
+    <connectivity>
+      <firewire capable="True" />
+      <bluetooth capable="False" />
+      <threeG capable="False" />
+      <wireless capable="True" />
+      <usb capable="True" usb1="True" usb2="True" usb3="False" />
+    </connectivity>
+    <smallBusinessAdvantage capable="True" installed="True" />
+    <voiceControl installed="True" />
+    <intelAppUp installed="True" />
+  </hardware>
+</profile>

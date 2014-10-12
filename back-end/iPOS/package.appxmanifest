@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="iPOS" Version="1.0.0.1" Publisher="CN=ratnesh.saxena" />
+  <Properties>
+    <DisplayName>iPOS</DisplayName>
+    <PublisherDisplayName>ratnesh.saxena</PublisherDisplayName>
+    <Logo>images\50x50-icon.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="index.html">
+      <m2:VisualElements DisplayName="iPOS" Description="iPOS" ForegroundText="light" BackgroundColor="#464646" Square150x150Logo="images\150x150.png" Square30x30Logo="images\30x30 icon.png" ToastCapable="true">
+        <m2:DefaultTile ShortName="iPOS">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="images\splash-620x300.png" />
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="portrait" />
+          <m2:Rotation Preference="landscape" />
+          <m2:Rotation Preference="portraitFlipped" />
+          <m2:Rotation Preference="landscapeFlipped" />
+        </m2:InitialRotationPreference>
+      </m2:VisualElements>
+      <Extensions>
+        <Extension Category="windows.fileTypeAssociation">
+          <FileTypeAssociation Name="machinespec">
+            <SupportedFileTypes>
+              <FileType>.xml</FileType>
+            </SupportedFileTypes>
+          </FileTypeAssociation>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="documentsLibrary" />
+  </Capabilities>
+</Package>

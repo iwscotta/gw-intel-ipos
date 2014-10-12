@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<profile xmlVersion="2.22" engineVersion="2.1.0.180">
+  <hardware isEntryLevelNotebook="False" isMobile="True">
+    <chipset northbridgeFamily="Other" smallFormFactor="False">
+      <northbridgeModel>Haswell-ULT</northbridgeModel>
+    </chipset>
+    <cpu family="CoreI5" isMobile="True" ultraLowVoltage="True" starRating="4" secondGeneration="False" gen="4" detectionConfidence="100" ultrabook="True" vpro="True" conflictFree="False">
+      <clockSpeed>1.6</clockSpeed>
+      <maxTurboBoost>2.3</maxTurboBoost>
+      <maxBurstSpeed />
+      <manufacturer>Intel</manufacturer>
+      <name>Intel® Core™ i5 4300Y</name>
+      <model>4300Y</model>
+    </cpu>
+    <storage>
+      <hdd>128</hdd>
+      <diskDrives>
+        <drive manufacturer="Other" type="SSD" capacity="128" />
+      </diskDrives>
+      <ram>4096</ram>
+    </storage>
+    <modems />
+    <operatingSystem>
+      <name>Microsoft Windows 8.1 Pro</name>
+      <servicePack></servicePack>
+      <buildNumber>9600</buildNumber>
+      <version>6.3.9600</version>
+      <architecture>64</architecture>
+    </operatingSystem>
+    <graphics intelGraphicsCapability="HD4200" inUse="IntelHD4200" switchable="False" inUseDescription="Intel® HD Graphics 4200" wirelessDisplayCapable="False" wirelessDisplayInstalled="False" wirelessDisplayGeneration="">
+      <adapter manufacturer="Intel">
+        <name>Intel® HD Graphics 4200</name>
+        <adapterRam>2031.42</adapterRam>
+      </adapter>
+    </graphics>
+    <system>
+      <manufacturer>Dell Inc.</manufacturer>
+      <model>Venue 11 Pro 7130 vPro</model>
+    </system>
+    <bios>
+      <version>Dell Inc. A11</version>
+      <date>04/16/2014</date>
+    </bios>
+    <touchscreen hasTouchScreen="True" numberOfTouchScreenPoints="10" />
+    <webCam installed="True" hdCapable="False" />
+    <power hasBattery="True" />
+    <wireless>
+      <adapter family="Other" model="Other" brand="None">
+        <name>Intel(R) Dual Band Wireless-AC 7260</name>
+        <supportedStandards>
+          <wimax>False</wimax>
+        </supportedStandards>
+      </adapter>
+    </wireless>
+    <connectivity>
+      <firewire capable="False" />
+      <bluetooth capable="True" />
+      <threeG capable="False" />
+      <wireless capable="True" />
+      <usb capable="True" usb1="True" usb2="True" usb3="True" />
+    </connectivity>
+    <smallBusinessAdvantage capable="False" installed="False" />
+    <voiceControl installed="False" />
+    <intelAppUp installed="False" />
+  </hardware>
+</profile>
