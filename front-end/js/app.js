@@ -38,6 +38,16 @@ $(document).ready(function () {
           startAttractLoop();
       }, 1000 * idleTime);			
   });
+  
+  $(document).touchmove(function(){
+      clearTimeout(activeTimeout);
+      if (attractLoopActive) {
+          stopAttractLoop();
+      }
+      activeTimeout = setTimeout(function(){
+          startAttractLoop();
+      }, 1000 * idleTime);			
+  });
 });
 
 function startAttractLoop(){
@@ -51,7 +61,9 @@ function stopAttractLoop(){
   resetButtons();
   currentMovie.stop(1);
   animationComplete();
-  attractLoopActive = false;
+  setTimeout(function(){
+    attractLoopActive = false;
+  }, 100 * idleTime);
 }
 
 function verticallyCenterAnimation(){
@@ -121,7 +133,6 @@ function startMovie(movie) {
 
 function animationComplete() {
   if(currentMovieHolder.attr('class') == 'ipos-comingsoon') {
-    console.log(currentMovieHolder.attr('class'));
     currentMovie.play();
   }else {
     currentMovieHolder.closest('.animation-holder').css('display', 'none');
@@ -221,7 +232,7 @@ function setListeners() {
       if(selectedMovie != undefined){
         startMovie(selectedMovie);
       }else {
-        startMovie(comingsoonMovie)
+        startMovie(comingsoonMovie);
       }
     }
   });
