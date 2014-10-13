@@ -244,6 +244,6 @@ function setListeners() {
   
 }
 
-function navLink() {
-  //alert('hit');
+function navLink(id) {
+  console.log('main nav, clicked ' + id);
 }
