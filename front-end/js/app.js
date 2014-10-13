@@ -163,7 +163,6 @@ function hideInfoCard() {
 function showInfoCard(contentType) {
   //Get content type and append
   $(".info-card").find(".content").html("<div>" + contentType + " content here please!</div>");
-  //now animate in
   $(".info-card").addClass('show');
   //Show/hide pagnation button and optionally expand the price container.
   $(".pagination-button").parent().hide("slow").prev().each(function() {

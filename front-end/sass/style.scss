@@ -201,9 +201,7 @@ img {
       height: $horizontal-single-item-height*5 + $vertical-spacer*3;
       margin-bottom: 0;
       margin-top: $vertical-spacer;
-      overflow-x: hidden;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
+      overflow: hidden;
       @media screen and (orientation: portrait) { 
         height: $vertical-single-item-height*3 + $portrait-vertical-spacer*2;
         margin-top: $portrait-vertical-spacer;
@@ -258,9 +256,11 @@ img {
         float: left;
         margin: $vertical-spacer*.75;
         max-height: $horizontal-single-item-height - $vertical-spacer*2;
+        max-width: $horizontal-single-item-height - $vertical-spacer*2;
         @media screen and (orientation: portrait) { 
           margin: $portrait-vertical-spacer*.75;
           max-height: $vertical-single-item-height - $portrait-vertical-spacer*2;
+          max-width: $vertical-single-item-height - $portrait-vertical-spacer*2;
         }
       }
       p {
@@ -295,6 +295,7 @@ img {
           float: left;
           margin: $vertical-spacer*.75;
           max-height: $horizontal-single-item-height - $vertical-spacer*2;
+          max-width: $horizontal-single-item-height - $vertical-spacer*2;
         }
         p {
           @include vertical-align;
@@ -306,9 +307,11 @@ img {
         .nav-icon {
           margin: $vertical-spacer*1.75;
           max-height: $horizontal-single-item-height * 1.25 - $vertical-spacer*2;
+          max-width: $horizontal-single-item-height * 1.25 - $vertical-spacer*2;
           @media screen and (orientation: portrait) { 
             margin: $portrait-vertical-spacer*1.75;
             max-height: $vertical-single-item-height * 1.25 - $portrait-vertical-spacer*2;
+            max-width: $vertical-single-item-height * 1.25 - $portrait-vertical-spacer*2;
           }
         }
         p {
@@ -323,6 +326,7 @@ img {
       .nav-icon {
         margin: $portrait-vertical-spacer;
         max-height: $vertical-single-item-height * 1.25 - $portrait-vertical-spacer*2;
+        max-width: $vertical-single-item-height * 1.25 - $portrait-vertical-spacer*2;
       }
       p {
         @extend .bold-font;
@@ -518,10 +522,12 @@ img {
          }
       }
       .nav2-icon {
-        background: url("../images/icons/icon-circle.svg") no-repeat center 60px;
+        background: url("../images/icons/icon-circle.svg") no-repeat center 600px;
         background-size: 100% 100%;
         cursor: pointer;
+        height: 3vw;
         padding: 1.2vh;
+        width: 3vw;
         /* transition: background 0.5s ease-in-out; */
       }
      .nav2-icon-selected {
