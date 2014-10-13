@@ -8,6 +8,7 @@ var animationContainerOffset;
 var currentMovieHolder;
 var currentMovie;
 var currentButton;
+var selectedSection;
 var expandPrice = true;
 var activeTimeout;
 var attractLoopActive = false;
@@ -136,7 +137,7 @@ function setCarousel() {
   featuredSwiper = $('.featured').swiper({
     loop: true,
 	  slidesPerView: 3,
-    initialSlide: -1,
+    initialSlide: 2,
 		tdFlow: {
 			rotate: 30,
 			stretch: 10,
@@ -201,17 +202,20 @@ function setListeners() {
 
   $('.features-nav-item').click(function(evt) {
     resetButtons();
-    var id = $(this).attr('id');
-    showInfoCard(id);
-    var thisMovie = id + 'Movie';
-    console.log(thisMovie);
-    var selectedMovie = window[thisMovie];
-    if(selectedMovie != undefined){
-      startMovie(selectedMovie);
+    selectedSection = $(this).attr('id');
+    showInfoCard(selectedSection);
+    updateMinorNav(selectedSection);
+    if(attractLoopActive) {
+      // SKIP MOVIE AND GO STRAIGHT TO CONTENT..
     }else {
-      startMovie(comingsoonMovie)
+      var thisMovie = selectedSection + 'Movie';
+      var selectedMovie = window[thisMovie];
+      if(selectedMovie != undefined){
+        startMovie(selectedMovie);
+      }else {
+        startMovie(comingsoonMovie)
+      }
     }
-    updateMinorNav(id);
   });
   
   $('.nav2-icon').click(function(evt){

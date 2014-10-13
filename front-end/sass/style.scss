@@ -254,6 +254,7 @@ img {
     .single-height {
       clear: both;
       height: $horizontal-single-item-height;
+      width: $feature-navigation-area-width;
       @media screen and (orientation: portrait) { 
         height: $vertical-single-item-height;
       }

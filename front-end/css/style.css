@@ -342,6 +342,7 @@ img {
 .ipos-wrapper .feature-navigation-area .single-height {
   clear: both;
   height: 12.4vh;
+  width: 30vw;
 }
 @media screen and (orientation: portrait) {
   /* line 254, ../sass/style.scss */
@@ -349,7 +350,7 @@ img {
     height: 7.6vh;
   }
 }
-/* line 260, ../sass/style.scss */
+/* line 261, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .single-height .nav-icon {
   display: inline-block;
   float: left;
@@ -358,14 +359,14 @@ img {
   max-width: 8.4vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 260, ../sass/style.scss */
+  /* line 261, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .single-height .nav-icon {
     margin: 0.675vh;
     max-height: 5.8vh;
     max-width: 5.8vh;
   }
 }
-/* line 272, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .single-height p {
   position: relative;
   top: 50%;
@@ -374,37 +375,37 @@ img {
   font-size: 1.2vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 272, ../sass/style.scss */
+  /* line 273, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .single-height p {
     font-size: 1.5vh;
   }
 }
-/* line 282, ../sass/style.scss */
+/* line 283, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width {
   clear: both;
 }
-/* line 284, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width div {
   float: left;
   width: 14.4375vw;
 }
-/* line 287, ../sass/style.scss */
+/* line 288, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width div:first-child {
   margin-right: 1.125vw;
 }
-/* line 291, ../sass/style.scss */
+/* line 292, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width .half-width-single-holder {
   height: 0;
 }
-/* line 293, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width .half-width-single-holder .single-height {
   height: 11.4vh;
 }
-/* line 297, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width .single-height {
   clear: right;
 }
-/* line 299, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width .single-height .nav-icon {
   display: inline-block;
   float: left;
@@ -412,84 +413,84 @@ img {
   max-height: 8.4vh;
   max-width: 8.4vh;
 }
-/* line 306, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width .single-height p {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
 }
-/* line 311, ../sass/style.scss */
+/* line 312, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width .double-height {
   height: 24.8vh;
 }
-/* line 313, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width .double-height .nav-icon {
   margin: 3.5vh;
   max-height: 11.5vh;
   max-width: 11.5vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 313, ../sass/style.scss */
+  /* line 314, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .half-width .double-height .nav-icon {
     margin: 1.575vh;
     max-height: 7.7vh;
     max-width: 7.7vh;
   }
 }
-/* line 323, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .half-width .double-height p {
   font-size: 1.2vw;
   margin: -2vh 1.125vw;
 }
-/* line 330, ../sass/style.scss */
+/* line 331, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .double-height {
   height: 15.2vh;
 }
-/* line 332, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .double-height .nav-icon {
   margin: 0.9vh;
   max-height: 7.7vh;
   max-width: 7.7vh;
 }
-/* line 337, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .double-height p {
   font-size: 1.2vw;
   margin: 0 2vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 337, ../sass/style.scss */
+  /* line 338, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .double-height p {
     font-size: 1.5vh;
   }
 }
-/* line 346, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .double {
   float: left;
   margin-right: 2vw;
 }
-/* line 349, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .double .single-height {
   height: 7.15vh;
   margin-right: 0;
 }
-/* line 354, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .third-width {
   float: left;
   margin-right: 2vw;
   width: 30.66667vw;
 }
-/* line 359, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .right {
   margin-right: 0;
 }
-/* line 362, ../sass/style.scss */
+/* line 363, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .two-third-width {
   float: left;
   margin-right: 2vw;
   width: 63.33333vw;
 }
-/* line 367, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width {
   float: left;
   height: 100%;
@@ -497,13 +498,13 @@ img {
   width: 21.375vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 367, ../sass/style.scss */
+  /* line 368, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width {
     margin-right: 2vw;
     width: 78vw;
   }
 }
-/* line 376, ../sass/style.scss */
+/* line 377, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width .price {
   color: #1172c1;
   height: 100%;
@@ -514,12 +515,12 @@ img {
   width: 100%;
 }
 @media screen and (orientation: portrait) {
-  /* line 376, ../sass/style.scss */
+  /* line 377, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width .price {
     padding: 0 2vw 0;
   }
 }
-/* line 388, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width .price .price-label {
   font-size: 1.8vh;
   margin: 0 .8vw;
@@ -527,14 +528,14 @@ img {
   top: -4.5vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 388, ../sass/style.scss */
+  /* line 389, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width .price .price-label {
     font-size: 1.8vh;
     margin: 0 .8vw;
     top: -4.5vh;
   }
 }
-/* line 399, ../sass/style.scss */
+/* line 400, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width .price .large-price {
   font-size: 7vh;
   letter-spacing: -.4vw;
@@ -543,13 +544,13 @@ img {
   top: -1.2vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 399, ../sass/style.scss */
+  /* line 400, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width .price .large-price {
     letter-spacing: -.8vw;
     line-height: 9vh;
   }
 }
-/* line 410, ../sass/style.scss */
+/* line 411, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width .price .small-price {
   font-size: 3vh;
   letter-spacing: -.1vw;
@@ -558,7 +559,7 @@ img {
   top: -4vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 410, ../sass/style.scss */
+  /* line 411, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width .price .small-price {
     font-size: 3vh;
     letter-spacing: -.1vw;
@@ -566,25 +567,25 @@ img {
     top: -4vh;
   }
 }
-/* line 425, ../sass/style.scss */
+/* line 426, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width {
   float: left;
   height: 100%;
   width: 7.5vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 425, ../sass/style.scss */
+  /* line 426, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .one-quarter-width {
     width: 16vw;
   }
 }
-/* line 432, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button {
   height: 100%;
   float: left;
   width: 100%;
 }
-/* line 436, ../sass/style.scss */
+/* line 437, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button .right {
   position: relative;
   top: 50% !important;
@@ -600,11 +601,11 @@ img {
   transform: rotate(-45deg);
   transition: 0.2s ease-in;
 }
-/* line 450, ../sass/style.scss */
+/* line 451, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button .right.down {
   transform: rotate(45deg);
 }
-/* line 454, ../sass/style.scss */
+/* line 455, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button .left {
   position: relative;
   top: 50% !important;
@@ -620,11 +621,11 @@ img {
   transform: rotate(45deg);
   transition: 0.2s ease-in;
 }
-/* line 468, ../sass/style.scss */
+/* line 469, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button .left.down {
   transform: rotate(-45deg);
 }
-/* line 475, ../sass/style.scss */
+/* line 476, ../sass/style.scss */
 .ipos-wrapper .featured-area {
   float: right;
   font-size: 2vw;
@@ -632,20 +633,20 @@ img {
   width: 66.625vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 475, ../sass/style.scss */
+  /* line 476, ../sass/style.scss */
   .ipos-wrapper .featured-area {
     float: left;
     width: 100vw;
   }
 }
-/* line 484, ../sass/style.scss */
+/* line 485, ../sass/style.scss */
 .ipos-wrapper .featured-area .main-nav {
   height: 12.4vh;
   margin-bottom: 2vh;
   position: relative;
 }
 @media screen and (orientation: portrait) {
-  /* line 484, ../sass/style.scss */
+  /* line 485, ../sass/style.scss */
   .ipos-wrapper .featured-area .main-nav {
     overflow: hidden;
     /* NECESSARY? */
@@ -653,17 +654,17 @@ img {
     margin-bottom: 0.9vh;
   }
 }
-/* line 493, ../sass/style.scss */
+/* line 494, ../sass/style.scss */
 .ipos-wrapper .featured-area .main-nav .middle {
   margin: 0 1.125vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 493, ../sass/style.scss */
+  /* line 494, ../sass/style.scss */
   .ipos-wrapper .featured-area .main-nav .middle {
     margin: 0 2vw;
   }
 }
-/* line 499, ../sass/style.scss */
+/* line 500, ../sass/style.scss */
 .ipos-wrapper .featured-area .main-nav a {
   display: block;
   float: left;
@@ -673,25 +674,25 @@ img {
   line-height: 11.4vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 499, ../sass/style.scss */
+  /* line 500, ../sass/style.scss */
   .ipos-wrapper .featured-area .main-nav a {
     width: 30.66667vw;
     line-height: 6.08vh;
   }
 }
-/* line 512, ../sass/style.scss */
+/* line 513, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content {
   height: 80.4vh;
   overflow: hidden;
 }
 @media screen and (orientation: portrait) {
-  /* line 512, ../sass/style.scss */
+  /* line 513, ../sass/style.scss */
   .ipos-wrapper .featured-area .featured-content {
     height: 48vh;
     width: 96vw;
   }
 }
-/* line 519, ../sass/style.scss */
+/* line 520, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .nav2-container {
   top: 86.8vh;
   height: 3vw;
@@ -700,13 +701,13 @@ img {
   z-index: 100000 !important;
 }
 @media screen and (orientation: portrait) {
-  /* line 519, ../sass/style.scss */
+  /* line 520, ../sass/style.scss */
   .ipos-wrapper .featured-area .featured-content .nav2-container {
     top: 59.05vh;
     height: 4vw;
   }
 }
-/* line 530, ../sass/style.scss */
+/* line 531, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .nav2-icon {
   background: url("../images/icons/icon-circle.svg") no-repeat center 600px;
   background-size: 100% 100%;
@@ -716,12 +717,12 @@ img {
   width: 3vw;
   /* transition: background 0.5s ease-in-out; */
 }
-/* line 539, ../sass/style.scss */
+/* line 540, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .nav2-icon-selected {
   background: url("../images/icons/icon-circle.svg") no-repeat center top;
   background-size: 100% 100%;
 }
-/* line 543, ../sass/style.scss */
+/* line 544, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .animation-holder {
   display: none;
 }
@@ -746,7 +747,7 @@ BELOW THIS LINE IS SWIPER CODE FOR THE CAROUSEL
 /* ===============================================================
 Basic Swiper Styles 
 ================================================================*/
-/* line 572, ../sass/style.scss */
+/* line 573, ../sass/style.scss */
 .swiper-container {
   backface-visibility: hidden;
   margin: 0 auto;
@@ -756,7 +757,7 @@ Basic Swiper Styles
   -ms-backface-visibility: hidden;
 }
 
-/* line 580, ../sass/style.scss */
+/* line 581, ../sass/style.scss */
 .swiper-wrapper {
   position: relative;
   transition-property: transform, left, top;
@@ -770,25 +771,25 @@ Basic Swiper Styles
   -ms-transition-timing-function: ease;
 }
 
-/* line 592, ../sass/style.scss */
+/* line 593, ../sass/style.scss */
 .swiper-free-mode > .swiper-wrapper {
   transition-timing-function: ease-out;
   margin: 0 auto;
   -ms-transition-timing-function: ease-out;
 }
 
-/* line 597, ../sass/style.scss */
+/* line 598, ../sass/style.scss */
 .swiper-slide {
   float: left;
 }
 
 /* IE10 Windows Phone 8 Fixes */
-/* line 602, ../sass/style.scss */
+/* line 603, ../sass/style.scss */
 .swiper-wp8-horizontal {
   -ms-touch-action: pan-y;
 }
 
-/* line 605, ../sass/style.scss */
+/* line 606, ../sass/style.scss */
 .swiper-wp8-vertical {
   -ms-touch-action: pan-x;
 }
@@ -796,25 +797,25 @@ Basic Swiper Styles
 /* ===============================================================
 3D
 ================================================================*/
-/* line 613, ../sass/style.scss */
+/* line 614, ../sass/style.scss */
 .swiper-container, .swiper-wrapper, .swiper-slide {
   transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
 }
 
-/* line 617, ../sass/style.scss */
+/* line 618, ../sass/style.scss */
 .swiper-container {
   perspective: 1200px;
   -ms-perspective: 1200px;
 }
 
-/* line 621, ../sass/style.scss */
+/* line 622, ../sass/style.scss */
 .swiper-wrapper {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px;
 }
 
-/* line 627, ../sass/style.scss */
+/* line 628, ../sass/style.scss */
 .swiper-slide-shadow-left, .swiper-slide-shadow-right, .swiper-slide-shadow-top, .swiper-slide-shadow-bottom {
   height: 100%;
   left: 0;
@@ -824,22 +825,22 @@ Basic Swiper Styles
   width: 100%;
 }
 
-/* line 635, ../sass/style.scss */
+/* line 636, ../sass/style.scss */
 .swiper-slide-shadow-left {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
 }
 
-/* line 638, ../sass/style.scss */
+/* line 639, ../sass/style.scss */
 .swiper-slide-shadow-right {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
 }
 
-/* line 641, ../sass/style.scss */
+/* line 642, ../sass/style.scss */
 .swiper-slide-shadow-top {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
-/* line 644, ../sass/style.scss */
+/* line 645, ../sass/style.scss */
 .swiper-slide-shadow-bottom {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
@@ -847,20 +848,20 @@ Basic Swiper Styles
 /* ===============================================================
 Custom carousel styles
 ================================================================*/
-/* line 651, ../sass/style.scss */
+/* line 652, ../sass/style.scss */
 .swiper-container {
   height: 35vh;
   padding: 17.5vh 0;
 }
 @media screen and (orientation: portrait) {
-  /* line 651, ../sass/style.scss */
+  /* line 652, ../sass/style.scss */
   .swiper-container {
     height: 19.44444vh;
     padding: 9vh 0;
   }
 }
 
-/* line 659, ../sass/style.scss */
+/* line 660, ../sass/style.scss */
 .swiper-slide {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyZDNmNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYWRlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -870,20 +871,20 @@ Custom carousel styles
   background-image: linear-gradient(#82d3f5, #00adef);
 }
 
-/* line 662, ../sass/style.scss */
+/* line 663, ../sass/style.scss */
 .swiper-slide-active + div {
   /* @include background-image($orange-gradient); */
   z-index: 10000 !important;
 }
 
-/* line 666, ../sass/style.scss */
+/* line 667, ../sass/style.scss */
 .swiper-container .swiper-slide .slide-label {
   font-size: 3vh;
   margin-top: 37vh;
   text-align: center;
 }
 @media screen and (orientation: portrait) {
-  /* line 666, ../sass/style.scss */
+  /* line 667, ../sass/style.scss */
   .swiper-container .swiper-slide .slide-label {
     margin-top: 21.875vh;
   }
