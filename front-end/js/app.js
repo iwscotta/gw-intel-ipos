@@ -153,21 +153,21 @@ function updateMinorNav(id) {
 function hideInfoCard() {
   //Slowly hide the item, while 'quickly' showing the pagnation button
   $(this).parent().removeClass('show');
-  $(".pagination-button").parent().show("fast").prev().each(function() {
+  $('.pagination-button').parent().show('fast').prev().each(function() {
     if(expandPrice) {
-      $(this).css({ width: ""},"slow");
+      $(this).css({ width: ''},'slow');
     }             
   });
 }
 
 function showInfoCard(contentType) {
   //Get content type and append
-  $(".info-card").find(".content").html("<div>" + contentType + " content here please!</div>");
-  $(".info-card").addClass('show');
+  $('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
+  $('.info-card').addClass('show');
   //Show/hide pagnation button and optionally expand the price container.
-  $(".pagination-button").parent().hide("slow").prev().each(function() {
+  $('.pagination-button').parent().hide('slow').prev().each(function() {
     if(expandPrice) {
-      $(this).animate({ width: "100%"},"slow");
+      $(this).animate({ width: '100%'},'slow');
     }             
   });
 }
@@ -182,8 +182,12 @@ function resetButtons() {
 }
 
 function setListeners() {
-  $(".swiper-wrapper").click(function(evt){
-    var active = $(".swiper-slide-active + div");
+  $('.main-nav').click(function(evt) {
+    navLink($(evt.target).data('id'));
+  });
+  
+  $('.swiper-wrapper').click(function(evt) {
+    var active = $('.swiper-slide-active + div');
     var clickRel = evt.pageX - active.offset().left;
     if(clickRel < 0){
       featuredSwiper.swipePrev();
@@ -212,32 +216,32 @@ function setListeners() {
   
   $('.nav2-icon').click(function(evt){
     var id = $(this).attr('data-navId');
-    $("#" + id).click();
+    $('#' + id).click();
   });
   
-  $(".pagination-button").click(function(evt) {
-    var elm = $(".features-nav").each(function() {
-      if($(this).is(":visible")) {
+  $('.pagination-button').click(function(evt) {
+    var elm = $('.features-nav').each(function() {
+      if($(this).is(':visible')) {
         if($(this).scrollTop() === 0) {
           var to =  $(this)[0].scrollHeight - $(this).height();
-          $(".pagination-button .left, .pagination-button .right").addClass("down");
-          $(this).animate({"scrollTop": to});
+          $('.pagination-button .left, .pagination-button .right').addClass('down');
+          $(this).animate({'scrollTop': to});
         } else {
-          $(".pagination-button .left, .pagination-button .right").removeClass('down');//("upArrow");
-          $(this).animate({"scrollTop" : 0});
+          $('.pagination-button .left, .pagination-button .right').removeClass('down');//('upArrow');
+          $(this).animate({'scrollTop' : 0});
         }
       }
     });
   });
   
-  $(".pagination-button").click(function(evt) {
-    var elm = $(".features-nav").each(function() {
+  $('.pagination-button').click(function(evt) {
+    var elm = $('.features-nav').each(function() {
       var to =  $(this)[0].scrollHeight - $(this).height();
-      $(this).scrollTop() == 0 ? $(this).animate({"scrollTop": to}) : $(this).animate({"scrollTop" : 0});
+      $(this).scrollTop() == 0 ? $(this).animate({'scrollTop': to}) : $(this).animate({'scrollTop' : 0});
     });
   });
   
-  $(".info-card-closer").click(function(evt) {
+  $('.info-card-closer').click(function(evt) {
     hideInfoCard.call(this);
     //Perform any other clean-up here
   });
@@ -245,5 +249,6 @@ function setListeners() {
 }
 
 function navLink(id) {
+  // explore, compare, testdrive
   console.log('main nav, clicked ' + id);
 }
