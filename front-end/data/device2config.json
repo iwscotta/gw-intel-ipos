@@ -1,0 +1,96 @@
+[
+	{
+		"version": "2.0",
+		"entities": [
+			{
+				"name": "Intel"
+			},
+			{
+				"name": "Retailer"
+			},
+			{
+				"name": "System",
+				"info": {
+					"deviceWidth": "15 inches",
+					"deviceType": "Tablet",
+					"security": "Device security info"
+				}
+			}
+		],
+		"factTags": [
+			{
+				"name": "processor",
+				"details": {
+					"featureNavInfo": "",
+					"featureNavRolloverInfo": "",
+					"featureNavIcon": "",
+					"featureCardIcon": "",
+					"featureCardCopy": ""
+				}
+			},{
+				"name": "memory",
+					"details": {
+					"featureNavInfo": "",
+					"featureNavRolloverInfo": "",
+					"featureNavIcon": "",
+					"featureCardIcon": "",
+					"featureCardCopy": ""
+				}
+			},{
+				"name": "graphics",
+					"details": {
+					"featureNavInfo": "",
+					"featureNavRolloverInfo": "",
+					"featureNavIcon": "",
+					"featureCardIcon": "",
+					"featureCardCopy": ""
+				}
+			},{
+				"name": "camera",
+					"details": {
+					"featureNavInfo": "16MP Rear + 8MP Front",
+					"featureNavRolloverInfo": "",
+					"featureNavIcon": "",
+					"featureCardIcon": "",
+					"featureCardCopy": ""
+				}
+			},{
+				"name": "device",
+					"details": {
+					"featureNavInfo": "",
+					"featureNavRolloverInfo": "",
+					"featureNavIcon": "",
+					"featureCardIcon": "",
+					"featureCardCopy": ""
+				}
+			},{
+				"name": "hard-drive",
+					"details": {
+					"featureNavInfo": "",
+					"featureNavRolloverInfo": "",
+					"featureNavIcon": "",
+					"featureCardIcon": "",
+					"featureCardCopy": ""
+				}
+			},{
+				"name": "os",
+					"details": {
+					"featureNavInfo": "",
+					"featureNavRolloverInfo": "",
+					"featureNavIcon": "",
+					"featureCardIcon": "",
+					"featureCardCopy": ""
+				}
+			},{
+				"name": "security",
+					"details": {
+					"featureNavInfo": "",
+					"featureNavRolloverInfo": "",
+					"featureNavIcon": "",
+					"featureCardIcon": "",
+					"featureCardCopy": ""
+				}
+			}
+		]
+	}
+]

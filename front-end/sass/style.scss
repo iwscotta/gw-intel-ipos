@@ -660,7 +660,7 @@ Custom carousel styles
   @include background-image($light-blue-gradient);
 }
 .swiper-slide-active + div {
-	@include background-image($orange-gradient);
+	/* @include background-image($orange-gradient); */
 	z-index: 10000 !important;
 }
 .swiper-container .swiper-slide .slide-label {
