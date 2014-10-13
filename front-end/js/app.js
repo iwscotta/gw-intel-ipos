@@ -109,7 +109,7 @@ function startMovie(movie) {
     currentMovie.stop(1);
     currentMovieHolder.closest('.animation-holder').css('display', 'none');
   }
-  $('.swiper-container').hide();
+  $('.content-container').hide();
   currentMovieHolder = $(movie[1]);
   currentMovie = movie[0];
   currentMovieHolder.closest('.animation-holder').css('display', 'block');
@@ -120,7 +120,7 @@ function startMovie(movie) {
 
 function animationComplete() {
   currentMovieHolder.closest('.animation-holder').css('display', 'none');
-  $('.swiper-container').fadeIn();
+  $('.content-container').fadeIn();
 }
 
 function setOrientation() {
@@ -163,7 +163,7 @@ function hideInfoCard() {
 
 function showInfoCard(contentType) {
   //Get content type and append
-  $('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
+  //$('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
   $('.info-card').addClass('show');
   //Show/hide pagnation button and optionally expand the price container.
   $('.pagination-button').parent().hide('slow').prev().each(function() {
@@ -206,7 +206,7 @@ function setListeners() {
     showInfoCard(selectedSection);
     updateMinorNav(selectedSection);
     if(attractLoopActive) {
-      // SKIP MOVIE AND GO STRAIGHT TO CONTENT..
+      animationComplete();
     }else {
       var thisMovie = selectedSection + 'Movie';
       var selectedMovie = window[thisMovie];

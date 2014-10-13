@@ -57,6 +57,7 @@ $feature-nav-label-font-size: 1.1vw;
 $portrait-feature-nav-label-font-size: 1.4vh;
 $feature-nav-font-size: 1.2vw;
 $portrait-feature-nav-font-size: 1.5vh;
+$content-device-gutter: 2.4vw 4vh;
 
 
 /*
@@ -518,8 +519,8 @@ img {
         width: $featured-area-portrait-width - $portrait-gutter*2;
       }
       .nav2-container {
-         top: $horizontal-single-item-height * 7;
-         height: 3vw;
+         top: ($horizontal-single-item-height * 7) + $vertical-spacer;
+         height: 2vw;
          position: fixed;
          right: 4vw;
          z-index: 100000 !important;
@@ -543,6 +544,90 @@ img {
       }
       .animation-holder {
         display: none;
+      }
+      .content-container {
+        display: none;
+        padding: $content-device-gutter;
+        .intro {
+          padding-bottom: 6vh;
+        }
+        .title-label {
+          font-size: 1.8vw;
+          display: block;
+          padding-bottom: 0.3vh;
+          letter-spacing: 0.05vw;
+        }
+        .tag-lines {
+          font-size: 2.4vw;
+          display: block;
+          padding-bottom: 2vh;
+        }
+        .overview-label {
+          font-size: 1.66vw;
+          width:54vw;
+        }
+        .content-icon {
+          height:11.5vh;
+        }
+        .col-3 {
+          text-align: center;
+          width: 33.3%;
+          float: left;
+          padding-bottom: 2vh;
+        }
+        .content-superscript {
+          vertical-align: top;
+        }
+        .top-content-labels {
+          text-transform: uppercase;
+          font-size: 1.6vw;
+        }
+        .column-one {
+          color:$intel-light-orange;
+          font-size: 5.3vw;
+        }
+        .column-one.content-superscript, .column-two.content-superscript, .column-three.content-superscript {
+          font-size: 3vw;
+        }
+        .column-two {
+          color:$intel-green;
+          font-size: 5.3vw;
+        }
+        .column-three {
+          font-size: 5.3vw;
+          color:$intel-light-blue;
+        }
+        .col-3 img {
+          max-height: 11.5vh;
+        }
+        .column-texts {
+          margin-left: 2.5vw;
+        }
+        .copyright {
+          font-size: 1.1vw;
+          vertical-align: super;
+        }
+        .content-headers {
+          width: 33.33%;
+          float: left;
+          text-align: center;
+          font-size: 1.7vw;
+        }
+        .separator {
+          width: 55%;
+          height: 1px;
+          background: #000;
+          margin: 3vh 0vw 1vh 4.6vw;
+        }
+        .orange {
+          background:$intel-light-orange;
+        }
+        .green {
+          background: $intel-green;
+        }
+        .blue {
+          background:$intel-light-blue;
+        }
       }
     }
   }
