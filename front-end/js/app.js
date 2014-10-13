@@ -136,7 +136,7 @@ function setCarousel() {
   featuredSwiper = $('.featured').swiper({
     loop: true,
 	  slidesPerView: 3,
-    initialSlide: 2,
+    initialSlide: -1,
 		tdFlow: {
 			rotate: 30,
 			stretch: 10,
