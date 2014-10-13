@@ -71,7 +71,7 @@ function populateMarkup() {
       deviceOS = $(iposOS).find('name').text();
       $('<p></p>').html(osTitle + deviceOS).appendTo('.os');
       
-      // AUX 1
+      // Security
       var peripheralTitle = '<span class="feature-nav-label">Security<br /></span>';
       $('<p></p>').html(peripheralTitle + deviceSecurity).appendTo('.security');
       
@@ -92,4 +92,8 @@ function populateMarkup() {
       alert('An error occurred while processing XML file.');
     }
   });
+}
+
+function setSelectedContent(selectedSection) {
+  console.log('Setting for ' + selectedSection);
 }

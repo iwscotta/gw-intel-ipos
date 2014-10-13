@@ -13,6 +13,7 @@ var expandPrice = true;
 var activeTimeout;
 var attractLoopActive = false;
 var idleTime = 120;
+var priceWidth;
 var movie, stage, compClass, deviceMovie, memoryMovie, osMovie, processorMovie, attractionMovie, comingsoonMovie;
 
 $(document).ready(function () {
@@ -119,8 +120,13 @@ function startMovie(movie) {
 }
 
 function animationComplete() {
-  currentMovieHolder.closest('.animation-holder').css('display', 'none');
-  $('.content-container').fadeIn();
+  if(currentMovieHolder.attr('class') == 'ipos-comingsoon') {
+    console.log(currentMovieHolder.attr('class'));
+    currentMovie.play();
+  }else {
+    currentMovieHolder.closest('.animation-holder').css('display', 'none');
+    $('.content-container').fadeIn();
+  }
 }
 
 function setOrientation() {
@@ -156,17 +162,18 @@ function hideInfoCard() {
   $(this).parent().removeClass('show');
   $('.pagination-button').parent().show('fast').prev().each(function() {
     if(expandPrice) {
-      $(this).css({ width: ''},'slow');
+      $(this).animate({ width: priceWidth},'slow');
     }             
   });
 }
 
 function showInfoCard(contentType) {
   //Get content type and append
-  //$('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
+  $('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
   $('.info-card').addClass('show');
   //Show/hide pagnation button and optionally expand the price container.
   $('.pagination-button').parent().hide('slow').prev().each(function() {
+    priceWidth = $(this).css('width');
     if(expandPrice) {
       $(this).animate({ width: '100%'},'slow');
     }             
@@ -205,6 +212,7 @@ function setListeners() {
     selectedSection = $(this).attr('id');
     showInfoCard(selectedSection);
     updateMinorNav(selectedSection);
+    setSelectedContent(selectedSection);
     if(attractLoopActive) {
       animationComplete();
     }else {
