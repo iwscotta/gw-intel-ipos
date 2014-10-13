@@ -38,16 +38,7 @@ $(document).ready(function () {
           startAttractLoop();
       }, 1000 * idleTime);			
   });
-  
-  $(document).touchmove(function(){
-      clearTimeout(activeTimeout);
-      if (attractLoopActive) {
-          stopAttractLoop();
-      }
-      activeTimeout = setTimeout(function(){
-          startAttractLoop();
-      }, 1000 * idleTime);			
-  });
+
 });
 
 function startAttractLoop(){

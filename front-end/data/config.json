@@ -25,7 +25,9 @@
 					"featureNavRolloverInfo": "",
 					"featureNavIcon": "",
 					"featureCardIcon": "",
-					"featureCardCopy": ""
+					"featureCardCopy": "",
+					"featureContentTitleLabel": "",
+					
 				}
 			},{
 				"name": "memory",
