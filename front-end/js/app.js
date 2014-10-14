@@ -153,6 +153,8 @@ function setCarousel() {
     loop: true,
 	  slidesPerView: 3,
     initialSlide: 2,
+    // TODO: DO NOT TURN OFF IF NOT IE
+    useCSS3Transforms: false,
 		tdFlow: {
 			rotate: 30,
 			stretch: 10,
@@ -199,7 +201,7 @@ function resetButtons() {
 
 function setListeners() {
   $('.main-nav').click(function(evt) {
-    navLink($(evt.target).data('id'));
+    navLink($(evt.target));
   });
   
   $('.swiper-wrapper').click(function(evt) {
@@ -216,7 +218,6 @@ function setListeners() {
   //http://www.idangero.us/sliders/swiper/api.php
 
   $('.menu-item').click(function(evt) {
-    console.log('click');
     // Do nothing if current button is clicked
     if(selectedSection != $(this).attr('id')) {
       resetButtons();
@@ -287,8 +288,19 @@ function setListeners() {
   
 }
 
-function navLink(id) {
+function navLink(ele) {
+  $('.main-nav-item').each(function() {
+    $(this).removeClass('active');
+  });
   $('.info-card-closer').trigger('click');
-  // explore, compare, testdrive
-  console.log('main nav, clicked ' + id);
+  $(ele).addClass('active');
+  if($(ele).data('id') == 'explore') {
+    $('.compare-container').hide();
+    $('.swiper-container').fadeIn();
+    $('.content-container').hide();
+    stopAttractLoop();
+    selectedSection = null;
+  }else if($(ele).data('id') == 'compare') {
+    $('.compare-container').show();
+  }
 }

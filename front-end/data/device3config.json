@@ -23,10 +23,16 @@
 			{
 				"name": "processor",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
-				"featureNavIcon": "",
-				"featureCardIcon": "",
-				"featureCardCopy": "",
+				"featureNavRolloverInfo": 
+					{
+						"calloutText": "26%",
+            "featureText": "Faster Media Creation"
+					},
+					"featureNavIcon": "",
+					"featureCardImage": "intel-core-i3.png",
+					"featureCardProductName": "Intel® Core™ i3",
+					"featureCardHeader": "Performance you can see",
+					"featureCardCopy": "Get a smooth, seamless visual experience with a 4th generation Intel® Core™ i3 processor, featuring longer battery life and built-in security for deeper protection.",
 				"featureContentTitleLabel": "Business Applications",
 				"featureContentTagLines": "No more business as usual.",
 				"featureContentOverviewLabel": "The 4th generation Intel Core processor not only delivers fantastic media capabilities, but also faster, smarter, and more efficient computing.",
@@ -48,10 +54,16 @@
 			},{
 				"name": "memory",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "20%",
+            "featureText": "Faster Downloads"
+					},
 				"featureNavIcon": "",
-				"featureCardIcon": "",
-				"featureCardCopy": "",
+				"featureCardImage": "intel-core-i3.png",
+				"featureCardProductName": "RAM",
+				"featureCardHeader": "Ram!",
+				"featureCardCopy": "Gett ram.",
 				"featureContentTitleLabel": "4GB 1.3GHz DDR3",
 				"featureContentTagLines": "Faster than virtual memory.",
 				"featureContentOverviewLabel": "Actively running applications on a computer, such as operating systems and other computer software, are stored in computer memory.",
@@ -73,10 +85,16 @@
 			},{
 				"name": "graphics",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "2X",
+            "featureText": "Greater Bandwidth"
+					},
 				"featureNavIcon": "",
-				"featureCardIcon": "",
-				"featureCardCopy": "",
+				"featureCardImage": "intel-core-i3.png",
+				"featureCardProductName": "0Intel® Core™ i3",
+				"featureCardHeader": "0Performance you can see",
+				"featureCardCopy": "0Get a smooth, seamless visual experience with a 4th generation Intel® Core™ i3 processor, featuring longer battery life and built-in security for deeper protection.",
 				"featureContentTitleLabel": "",
 				"featureContentTagLines": "",
 				"featureContentOverviewLabel": "",
@@ -98,10 +116,16 @@
 			},{
 				"name": "camera",
 				"featureNavInfo": "8MP rear + 2MP front",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "1080p",
+            "featureText": "HD video cameras"
+					},
 				"featureNavIcon": "",
-				"featureCardIcon": "",
-				"featureCardCopy": "",
+				"featureCardImage": "intel-core-i3.png",
+				"featureCardProductName": "0Intel® Core™ i3",
+				"featureCardHeader": "0Performance you can see",
+				"featureCardCopy": "0Get a smooth, seamless visual experience with a 4th generation Intel® Core™ i3 processor, featuring longer battery life and built-in security for deeper protection.",
 				"featureContentTitleLabel": "",
 				"featureContentTagLines": "",
 				"featureContentOverviewLabel": "",
@@ -123,10 +147,16 @@
 			},{
 				"name": "device",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "10.8",
+            "featureText": "HD Screen"
+					},
 				"featureNavIcon": "",
-				"featureCardIcon": "",
-				"featureCardCopy": "",
+				"featureCardImage": "intel-core-i3.png",
+				"featureCardProductName": "0Intel® Core™ i3",
+				"featureCardHeader": "0Performance you can see",
+				"featureCardCopy": "0Get a smooth, seamless visual experience with a 4th generation Intel® Core™ i3 processor, featuring longer battery life and built-in security for deeper protection.",
 				"featureContentTitleLabel": "Dell Venue 11 Pro Tablet",
 				"featureContentTagLines": "Versatile productivity.",
 				"featureContentOverviewLabel": "No hotspot, no problem. Take your tablet anywhere with an embedded 4G LTE card. This powerhouse delivers impressive performance with a brilliant screen as well as pinpoint accuracy with 10-point touch typing capability.",
@@ -148,10 +178,16 @@
 			},{
 				"name": "hard-drive",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "15,000+",
+            "featureText": "Songs"
+					},
 				"featureNavIcon": "",
-				"featureCardIcon": "",
-				"featureCardCopy": "",
+				"featureCardImage": "intel-core-i3.png",
+				"featureCardProductName": "0Intel® Core™ i3",
+				"featureCardHeader": "0Performance you can see",
+				"featureCardCopy": "0Get a smooth, seamless visual experience with a 4th generation Intel® Core™ i3 processor, featuring longer battery life and built-in security for deeper protection.",
 				"featureContentTitleLabel": "",
 				"featureContentTagLines": "",
 				"featureContentOverviewLabel": "",
@@ -173,10 +209,16 @@
 			},{
 				"name": "os",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo": 
+					{
+						"calloutText": "One Drive",
+	          "featureText": "Cloud Storage"
+					},
 				"featureNavIcon": "",
-				"featureCardIcon": "",
-				"featureCardCopy": "",
+				"featureCardImage": "intel-core-i3.png",
+				"featureCardProductName": "0Intel® Core™ i3",
+				"featureCardHeader": "0Performance you can see",
+				"featureCardCopy": "0Get a smooth, seamless visual experience with a 4th generation Intel® Core™ i3 processor, featuring longer battery life and built-in security for deeper protection.",
 				"featureContentTitleLabel": "Windows 8.1",
 				"featureContentTagLines": "Multitasking, a swipe away.",
 				"featureContentOverviewLabel": "Windows 8.1 lets you multitask with up to four separate apps at the same time on Windows tablets and PCs, so you can work and play at the same time.",
@@ -198,10 +240,16 @@
 			},{
 				"name": "security",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo":
+						{
+							"calloutText": "20%",
+	            "featureText": "Cloud Storage"
+						},
 				"featureNavIcon": "",
-				"featureCardIcon": "",
-				"featureCardCopy": "",
+				"featureCardImage": "intel-core-i3.png",
+				"featureCardProductName": "0Intel® Core™ i3",
+				"featureCardHeader": "0Performance you can see",
+				"featureCardCopy": "0Get a smooth, seamless visual experience with a 4th generation Intel® Core™ i3 processor, featuring longer battery life and built-in security for deeper protection.",
 				"featureContentTitleLabel": "",
 				"featureContentTagLines": "",
 				"featureContentOverviewLabel": "",

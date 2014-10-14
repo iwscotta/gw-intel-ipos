@@ -380,6 +380,9 @@ img {
           display: inline-block;
         }
       }
+      .testdrive p {
+        margin: -2vh $gutter;
+      }
       .double-height {
         height: $horizontal-single-item-height * 2;
         .nav-icon, .callout {
@@ -447,6 +450,10 @@ img {
       float: left;
       margin-right: $portrait-gutter;
       width: ($app-width - $portrait-gutter*4) / 3;
+    }
+    .testdrive p {
+      margin-left: 2vw;
+      top: 2.5vh;
     }
     .right {
       margin-right: 0;
@@ -603,6 +610,9 @@ img {
           line-height: $vertical-single-item-height/1.25;
         }
       }
+      .active {
+        @extend .dark-blue-gradient;
+      }
     }
     .featured-content {
       height: $horizontal-single-item-height * 6 + $vertical-spacer * 3;
@@ -726,6 +736,12 @@ img {
   }
 }
 
+.compare-container {
+  top: $horizontal-single-item-height + $vertical-spacer;
+  position: fixed;
+  z-index: 1000;
+}
+
 /*
 BELOW THIS LINE IS SWIPER CODE FOR THE CAROUSEL
 ---------------------------------------------------------------------- */
@@ -767,6 +783,7 @@ Basic Swiper Styles
   -ms-transition-duration:0s;
   -ms-transform:translate3d(0px,0,0);
   -ms-transition-timing-function:ease;
+  -ms-perspective-origin: 0px;
 }
 .swiper-free-mode > .swiper-wrapper {
   transition-timing-function: ease-out;
@@ -799,7 +816,7 @@ Basic Swiper Styles
 }
 .swiper-wrapper {
   /* Windows 8 IE 10 fix */
-  -ms-perspective: 1200px;
+  -ms-perspective-origin:0px;
 }
 
 
