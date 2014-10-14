@@ -327,7 +327,7 @@ img {
           font-size: 4vh;
           transform: translateY(25%);
           top: 50%;
-          max-width: 50% !important;
+          max-width: 70% !important;
         }
         span {
           display: inline;
@@ -344,13 +344,13 @@ img {
       }
       .centered {
         .callout {
-          font-size: 6vh;
+          font-size: 5vh;
           margin: $vertical-spacer*.75 0 0 !important;
           max-width: 100% !important;
           width: 100%;
           @media screen and (orientation: portrait) { 
             font-size: 4vh;
-            max-width: none;
+            max-width: 100% !important;
             width: auto;
           }
           span {
@@ -426,7 +426,7 @@ img {
     }
     .double-height {
       height: $vertical-single-item-height * 2;
-      .nav-icon {
+      .nav-icon, .callout {
         margin: $portrait-vertical-spacer;
         max-height: $vertical-single-item-height * 1.25 - $portrait-vertical-spacer*2;
         max-width: $vertical-single-item-height * 1.25 - $portrait-vertical-spacer*2;
@@ -440,12 +440,12 @@ img {
         }
       }
       .callout {
-        @include vertical-align;
+
         @extend .thin-font;
         font-size: 12vh;
         letter-spacing: -.5vw;
         text-align: center;
-        width: 100%;
+   
         @media screen and (orientation: portrait) { 
           font-size: 6vh;
         }

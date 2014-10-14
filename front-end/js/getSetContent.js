@@ -111,7 +111,7 @@ function populateMarkup() {
       var peripheralTitle = '<span class="feature-nav-label">Security<br /></span>';
       $('<p></p>').html(peripheralTitle + deviceSecurity).appendTo('.security .menu-item-front');
       rolloverInfo = getDeviceInfo('security');
-      $('.security .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
+      $('.security .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText.replace('%','<span>%</span>') + '</div><p>' + rolloverInfo.featureText + '</p>')
 
       $('.dollars').text(priceDollars + '.');
       $('.cents').text(priceCents);
