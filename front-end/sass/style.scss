@@ -322,11 +322,23 @@ img {
         letter-spacing: -.25vw;
         max-width: 33% !important;
         text-align: center;
+        @media screen and (orientation: portrait) { 
+          font-size: 4vh;
+          transform: translateY(25%);
+          top: 50%;
+          max-width: 50% !important;
+        }
         span {
           display: inline;
           font-size: 3vh;
           margin: 0 0 0 5px;
           vertical-align: super;
+          @media screen and (orientation: portrait) { 
+            font-size: 1vh;
+          }
+        }
+        & + p {
+          text-transform: uppercase;
         }
       }
       .centered {
@@ -335,15 +347,24 @@ img {
           margin: $vertical-spacer*.75 0 0 !important;
           max-width: 100% !important;
           width: 100%;
+          @media screen and (orientation: portrait) { 
+            font-size: 4vh;
+            max-width: none;
+            width: auto;
+          }
           span {
             display: inline;
             font-size: 3vh;
             vertical-align: super;
+            @media screen and (orientation: portrait) { 
+              font-size: 1vh;
+            }
           }
           & + p {
             display: inline-block;
             margin: 0;
             text-align: center;
+            text-transform: uppercase;
             top: auto;
             transform: translateY(0);
             width: 100%;
@@ -424,17 +445,22 @@ img {
         letter-spacing: -.5vw;
         text-align: center;
         width: 100%;
+        @media screen and (orientation: portrait) { 
+          font-size: 6vh;
+        }
         span {
           display: inline;
           font-size: 3vh;
           margin: 0 0 0 5px;
           vertical-align: super;
+          @media screen and (orientation: portrait) { 
+            font-size: 2vh;
+          }
         }
         & + p {
-          display: inline-block;
-          margin: 0;
-          text-align: center;
-          width: 100%;
+          font-size: 2vh;
+          margin-top: 0;
+          text-transform: uppercase;
         }
       }
     }
@@ -740,6 +766,20 @@ img {
   top: $horizontal-single-item-height + $vertical-spacer;
   position: fixed;
   z-index: 1000;
+}
+
+.ipos-wrapper .featured-area .featured-content .swiper-slide img.nav2-icon{
+	height:60%;
+	vertical-align:middle;
+	width:auto;
+	position:relative;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.swiper-slide p{
+	text-align:center;
 }
 
 /*

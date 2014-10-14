@@ -113,7 +113,7 @@ function populateMarkup() {
       deviceOS = $(iposOS).find('name').text();
       $('<p></p>').html(osTitle + deviceOS).appendTo('.os .menu-item-front');
       rolloverInfo = getDeviceInfo('os');
-      $('.os .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
+      $('.os .menu-item-back').append('<p>' + rolloverInfo.featureText + '</p>')
 
       // Security
       var peripheralTitle = '<span class="feature-nav-label">Security<br /></span>';
