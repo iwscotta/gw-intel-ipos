@@ -17,6 +17,7 @@ var priceWidth;
 var movie, stage, compClass, deviceMovie, memoryMovie, osMovie, processorMovie, attractionMovie, comingsoonMovie;
 
 $(document).ready(function () {
+  $('.compare-container').hide();
   getDeviceData();
   setCarousel();
   setListeners();
@@ -142,9 +143,11 @@ function setOrientation() {
   if(window.innerHeight > window.innerWidth){
     $('.portrait-nav').css('display', 'block');
     $('.landscape-nav').css('display', 'none');
+    $('.compare-container img').attr('src','images/content/find-device-port.jpg');
   }else {
     $('.portrait-nav').css('display', 'none');
     $('.landscape-nav').css('display', 'block');
+    $('.compare-container img').attr('src','images/content/find-device.jpg');
   }
 }
 

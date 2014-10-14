@@ -766,6 +766,17 @@ img {
   top: $horizontal-single-item-height + $vertical-spacer;
   position: fixed;
   z-index: 1000;
+  @media screen and (orientation: portrait) { 
+    top: $vertical-single-item-height + $vertical-main-nav-item-height + $vertical-spacer*1.25;
+  }
+  img {
+    height: $horizontal-single-item-height*6 + $vertical-spacer*4;
+    width: $app-width - $gutter*2;
+    @media screen and (orientation: portrait) { 
+      height: $featured-area-portrait-height + $vertical-single-item-height*4 + $vertical-spacer*2.25;
+      width: $app-width - $portrait-gutter*1.8;
+    }
+  }
 }
 
 .ipos-wrapper .featured-area .featured-content .swiper-slide img.nav2-icon{
