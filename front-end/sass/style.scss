@@ -235,6 +235,9 @@ img {
         top:100%;
         transition: 1s;
         width: $feature-navigation-area-width;
+        @media screen and (orientation: portrait) {  
+          width: 97vw;
+        }
         &.show {
         	top: $horizontal-single-item-height + $vertical-spacer*2;
         	@media screen and (orientation: portrait) { /*dmoxin*/
