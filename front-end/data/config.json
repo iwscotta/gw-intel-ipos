@@ -242,8 +242,8 @@
 				"featureNavInfo": "",
 				"featureNavRolloverInfo":
 						{
-							"calloutText": "20%",
-	            "featureText": "Cloud Storage"
+							"calloutText": "128",
+	            "featureText": "bit security"
 						},
 				"featureNavIcon": "",
 				"featureCardImage": "intel-core-i3.png",

@@ -236,20 +236,30 @@ img {
         transition: 1s;
         width: $feature-navigation-area-width;
         &.show {
-        top: $horizontal-single-item-height + $vertical-spacer*2;
+        	top: $horizontal-single-item-height + $vertical-spacer*2;
+        	@media screen and (orientation: portrait) { /*dmoxin*/
+        		top:$horizontal-single-item-height + $vertical-spacer*2.5 + $featured-area-portrait-height;
+        	}
         }
         .info-card-prod {
           display: block;
           margin: 0 auto 20px;
-          width:120px; 
-          height:120px;
+          width:20vw; 
+          height:20vw;
+          @media screen and (orientation: portrait) { 
+          	float:left;
+          }
         }
         .main-stage-gradient {
-          min-height: 100px;
           padding: 20px 15px;
+          @media screen and (orientation: portrait) {
+          	float:left;
+          	height: $vertical-single-item-height*3 + $portrait-vertical-spacer*2; /* dmoxin */
+  	  	width: 35vw;
+          }
         }
         h2 { font-size:3vh; padding-bottom: 2vh; }
-        h3 { font-size:2vh; text-transform: capitalize; }
+        h3 { font-size:2vh; }
         sup { 
           font-size:2vh; 
           margin-top: -4.5vh
@@ -258,10 +268,16 @@ img {
           color: #1172c1;
           font-size: 2vh;
           line-height: 4vh;
-          padding: 15px
+          padding: 15px;
+          @media screen and (orientation: portrait) {
+          	float:left;
+  	  	width: 45vw;
+          }
         }
         @media screen and (orientation: portrait) { 
-          width: 100vw;
+          height: $vertical-single-item-height*3 + $portrait-vertical-spacer; /* dmoxin */
+          overflow: hidden;
+          width: 96vw; /* dmoxin */
         }
       }
       .info-card-closer{

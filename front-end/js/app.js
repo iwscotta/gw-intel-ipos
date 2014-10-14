@@ -117,6 +117,7 @@ function setAnimationObject(compId) {
 }
 
 function startMovie(movie) {
+  // TODO ACK DEBUG
   if(currentMovie != undefined){
     currentMovie.stop(1);
     currentMovieHolder.closest('.animation-holder').css('display', 'none');
@@ -127,7 +128,7 @@ function startMovie(movie) {
   currentMovieHolder.closest('.animation-holder').css('display', 'block');
   currentMovie.play();
   //HACK TO GET MOVIE TO SCALE PROPERLY..
-  //$(window).trigger('resize');
+  $(window).trigger('resize');
 }
 
 function animationComplete() {
