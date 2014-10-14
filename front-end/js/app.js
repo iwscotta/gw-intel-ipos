@@ -215,7 +215,8 @@ function setListeners() {
   //featuredSwiper.swipeNext();
   //http://www.idangero.us/sliders/swiper/api.php
 
-  $('.features-nav-item').click(function(evt) {
+  $('.menu-item').click(function(evt) {
+    console.log('click');
     // Do nothing if current button is clicked
     if(selectedSection != $(this).attr('id')) {
       resetButtons();

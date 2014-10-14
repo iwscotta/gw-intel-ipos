@@ -229,37 +229,37 @@ img {
       }
       .info-card {
         background: #fff;
-        bottom: -100%;
         height: 68vh;
         margin: 0px;
-        position: relative;
+        position: absolute;
+        top:100%;
         transition: 1s;
         width: $feature-navigation-area-width;
         &.show {
-          bottom: $horizontal-single-item-height*5 + $vertical-spacer*4;
+        top: $horizontal-single-item-height + $vertical-spacer*2;
         }
         .info-card-prod {
           display: block;
           margin: 0 auto 20px;
-           width:120px; 
-           height:120px;
-         }
-            .main-stage-gradient {
-           min-height: 100px;
-           padding: 20px 15px;
-            }
-            h2 { font-size:3vh; padding-bottom: 2vh; }
-            h3 { font-size:2vh; }
-            sup { 
-            font-size:2vh; 
-            margin-top: -4.5vh
-            }
-            .content {
-           color: #1172c1;
-           font-size: 2vh;
-           line-height: 4vh;
-           padding: 15px
-            }
+          width:120px; 
+          height:120px;
+        }
+        .main-stage-gradient {
+          min-height: 100px;
+          padding: 20px 15px;
+        }
+        h2 { font-size:3vh; padding-bottom: 2vh; }
+        h3 { font-size:2vh; }
+        sup { 
+          font-size:2vh; 
+          margin-top: -4.5vh
+        }
+        .content {
+          color: #1172c1;
+          font-size: 2vh;
+          line-height: 4vh;
+          padding: 15px
+        }
         @media screen and (orientation: portrait) { 
           width: 100vw;
         }
@@ -467,13 +467,16 @@ img {
       }
       .price {
         @extend .border;
+        background: #fff;
         color: $intel-medium-dark-blue;
         height: 100%;
         float: left;
         line-height: 5.2vw;
         padding: 1.5vh $gutter 0;
+        position: relative;
         text-align: right;
         width: 100%;
+        z-index: 100;
         @media screen and (orientation: portrait) { 
           padding: 0 $portrait-gutter 0;
         }

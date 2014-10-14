@@ -11,7 +11,10 @@ var deviceCamera;
 var configData;
 var contentImgPath = 'images/content/';
 var configFactTags;
-
+var infoCardImage;
+var infoCardProductName;
+var infoCardHeader;
+var infoCardCopy;
 
 function getDeviceData() {
   $.ajax({
@@ -29,6 +32,10 @@ function getDeviceData() {
       priceCents = json[0].entities[2].info.priceCents;
       configData = json;
       configFactTags = json[0].factTags;
+      infoCardImage = json[0].factTags[1].featureCardImage;
+      infoCardProductName = json[0].factTags[1].featureCardProductName;
+      infoCardHeader = json[0].factTags[1].featureCardHeader;
+      infoCardCopy = json[0].factTags[1].featureCardCopy;
       populateMarkup();
     }
   });
@@ -113,6 +120,13 @@ function populateMarkup() {
       $('<p></p>').html(peripheralTitle + deviceSecurity).appendTo('.security .menu-item-front');
       rolloverInfo = getDeviceInfo('security');
       $('.security .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
+
+      // Info Card
+      var infoCardImageString = "images/icons/processor/" + infoCardImage;
+      $('.info-card img:eq(2)').attr("src", infoCardImageString);
+      $('.info-card h2').text(infoCardProductName);
+      $('.info-card > .content > p').text(infoCardCopy);
+      $('.info-card > .content > h2').text(infoCardHeader);
 
       $('.dollars').text(priceDollars + '.');
       $('.cents').text(priceCents);
