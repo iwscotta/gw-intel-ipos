@@ -38,7 +38,7 @@ function getDeviceInfo(item) {
   var result = false;
   $.each(configFactTags, function(i, tag) {
     if (tag.name === item) {
-      result = tag.details.featureNavRolloverInfo;
+      result = tag.featureNavRolloverInfo;
     }
   });
   return result;
@@ -55,7 +55,7 @@ function populateMarkup() {
 		  var iposCpu = $(xml).find('cpu');
       deviceProcessor = $(iposCpu).find('name').text();
       var chipTitle = '<span class="feature-nav-label">Processor<br /></span>';
-      $('<p></p>').html(chipTitle + deviceProcessor).appendTo('.processor');
+      $('<p></p>').html(chipTitle + deviceProcessor).appendTo('.processor .menu-item-front');
       rolloverInfo = getDeviceInfo('processor');
       $('.processor .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText.replace('%','<span>%</span>') + '</div><p>' + rolloverInfo.featureText + '</p>')
 
@@ -64,7 +64,7 @@ function populateMarkup() {
       deviceRam = $(iposStorage).find('ram').text();
       deviceRam = Math.ceil(+deviceRam / 1024) + 'GB';
       iposRam = deviceRam + ' RAM';
-      $('<p></p>').html(memoryTitle + iposRam).appendTo('.memory');
+      $('<p></p>').html(memoryTitle + iposRam).appendTo('.memory .menu-item-front');
       rolloverInfo = getDeviceInfo('memory');
       $('.memory .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText.replace('%','<span>%</span>') + '</div><p>' + rolloverInfo.featureText + '</p>')
 
@@ -72,20 +72,20 @@ function populateMarkup() {
       $(xml).find('graphics').each(function() {
         var graphicsTitle = '<span class="feature-nav-label">Graphics<br /></span>';
         var iposGraphicsDescription = this.getAttribute('inUseDescription');
-        $('<p></p>').html(graphicsTitle + iposGraphicsDescription).appendTo('.graphics');
+        $('<p></p>').html(graphicsTitle + iposGraphicsDescription).appendTo('.graphics .menu-item-front');
       });
       rolloverInfo = getDeviceInfo('graphics');
       $('.graphics .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
 
       //Camera
       var cameraTitle = '<span class="feature-nav-label">Camera<br /></span>';
-      $('<p></p>').html(cameraTitle + deviceCamera).appendTo('.camera');
+      $('<p></p>').html(cameraTitle + deviceCamera).appendTo('.camera .menu-item-front');
       rolloverInfo = getDeviceInfo('camera');
       $('.camera .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
 
       //Device type
       var deviceTitle = '<span class="feature-nav-label">Device<br /></span>';
-      $('<p></p>').html(deviceTitle + 'Tablet').appendTo('.device');
+      $('<p></p>').html(deviceTitle + 'Tablet').appendTo('.device .menu-item-front');
       rolloverInfo = getDeviceInfo('device');
       $('.device .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
 
@@ -94,7 +94,7 @@ function populateMarkup() {
           var storageTitle = '<span class="feature-nav-label">Storage<br /></span>';
           var iposDiscCapacity = this.getAttribute('capacity');
           iposDiscCapacity = iposDiscCapacity + ' GB Hard Drive';
-          $('<p></p>').html(storageTitle + iposDiscCapacity).appendTo('.hard-drive');
+          $('<p></p>').html(storageTitle + iposDiscCapacity).appendTo('.hard-drive .menu-item-front');
         }
       });
       rolloverInfo = getDeviceInfo('hard-drive');
@@ -104,13 +104,13 @@ function populateMarkup() {
       var osTitle = '<span class="feature-nav-label">Operating System<br /></span>';
       var iposOS = $(xml).find('operatingSystem');
       deviceOS = $(iposOS).find('name').text();
-      $('<p></p>').html(osTitle + deviceOS).appendTo('.os');
+      $('<p></p>').html(osTitle + deviceOS).appendTo('.os .menu-item-front');
       rolloverInfo = getDeviceInfo('os');
       $('.os .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
 
       // Security
       var peripheralTitle = '<span class="feature-nav-label">Security<br /></span>';
-      $('<p></p>').html(peripheralTitle + deviceSecurity).appendTo('.security');
+      $('<p></p>').html(peripheralTitle + deviceSecurity).appendTo('.security .menu-item-front');
       rolloverInfo = getDeviceInfo('security');
       $('.security .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
 
