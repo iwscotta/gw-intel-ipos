@@ -796,10 +796,6 @@ img {
 .ipos-wrapper .featured-area .featured-content .content-container .col-3 img {
   max-height: 11.5vh;
 }
-/* line 603, ../sass/style.scss */
-.ipos-wrapper .featured-area .featured-content .content-container .column-texts {
-  margin-left: 2.5vw;
-}
 /* line 606, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .copyright {
   font-size: 1.1vw;

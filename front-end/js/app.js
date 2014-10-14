@@ -21,6 +21,7 @@ $(document).ready(function () {
   setCarousel();
   setListeners();
   setOrientation();
+  $('.content-container').hide();
   
   window.onresize = function() {
     setOrientation();
@@ -52,9 +53,7 @@ function stopAttractLoop(){
   resetButtons();
   currentMovie.stop(1);
   animationComplete();
-  setTimeout(function(){
-    attractLoopActive = false;
-  }, 100 * idleTime);
+  attractLoopActive = false;
 }
 
 function verticallyCenterAnimation(){
@@ -175,7 +174,7 @@ function showInfoCard(contentType) {
   $('.info-card').addClass('show');
   //Show/hide pagnation button and optionally expand the price container.
   $('.pagination-button').parent().hide('slow').prev().each(function() {
-    priceWidth = $(this).css('width');
+    priceWidth = $(this).css('width');;
     if(expandPrice) {
       $(this).animate({ width: '100%'},'slow');
     }             
@@ -188,6 +187,7 @@ function highlightButton(id) {
 }
 
 function resetButtons() {
+  $('.nav2-icon-selected').removeClass('nav2-icon-selected');
   $(currentButton).removeClass('feature-nav-active');
 }
 
@@ -215,9 +215,10 @@ function setListeners() {
     showInfoCard(selectedSection);
     updateMinorNav(selectedSection);
     setSelectedContent(selectedSection);
-    if(attractLoopActive) {
-      animationComplete();
-    }else {
+    $('.swiper-container').hide();
+    //if(attractLoopActive) {
+      //animationComplete();
+    //}else {
       var thisMovie = selectedSection + 'Movie';
       var selectedMovie = window[thisMovie];
       if(selectedMovie != undefined){
@@ -225,7 +226,7 @@ function setListeners() {
       }else {
         startMovie(comingsoonMovie);
       }
-    }
+    //}
   });
   
   $('.nav2-icon').click(function(evt){
@@ -257,6 +258,13 @@ function setListeners() {
   
   $('.info-card-closer').click(function(evt) {
     hideInfoCard.call(this);
+    $('.swiper-container').show();
+    $('.content-container').fadeOut();
+    if(currentMovie != undefined){
+      currentMovie.stop(1);
+      currentMovieHolder.closest('.animation-holder').css('display', 'none');
+    }
+    resetButtons();
     //Perform any other clean-up here
   });
   

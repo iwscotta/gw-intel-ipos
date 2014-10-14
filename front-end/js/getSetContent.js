@@ -6,20 +6,25 @@ var deviceWidth;
 var deviceType;
 var deviceSecurity;
 var deviceCamera;
+var configData;
+var contentImgPath = 'images/content/';
 
 function getDeviceData() {
   $.ajax({
     type: 'GET',
     url: 'data/config.json',
-    dataType: 'json',
-    success: function(json) {
+    dataType: 'text',
+    contentType: "application/json",
+    success: function(response) {
+      json = eval(response);
       deviceWidth = json[0].entities[2].info.deviceWidth;
       deviceType = json[0].entities[2].info.deviceType;
       deviceSecurity = json[0].entities[2].info.security;
-      deviceCamera = json[0].factTags[3].details.featureNavInfo;
+      deviceCamera = json[0].factTags[3].featureNavInfo;
+      configData = json;
+      populateMarkup();
     }
   });
-  populateMarkup();
 }
 
 function populateMarkup() {
@@ -95,5 +100,29 @@ function populateMarkup() {
 }
 
 function setSelectedContent(selectedSection) {
-  console.log('Setting for ' + selectedSection);
+  for(var i=0; i<json[0].factTags.length; i++) {
+    if(json[0].factTags[i].name == selectedSection){
+      $('.content-container .title-label').text(json[0].factTags[i].featureContentTitleLabel);
+      $('.content-container .tag-lines').text(json[0].factTags[i].featureContentTagLines);
+      $('.content-container .overview-label').text(json[0].factTags[i].featureContentOverviewLabel);
+      
+      $('.content-container .first-feature .spotlight').text(json[0].factTags[i].featureContentSpotlight1);
+      $('.content-container .first-feature .content-superscript').text(json[0].factTags[i].featureContentSpotlight1Super);
+      $('.content-container .first-feature .top-content-labels').text(json[0].factTags[i].featureContentSpotlight1Label);
+      $('.content-container .first-feature img').attr('src', contentImgPath + json[0].factTags[i].featureContentSpotlight1Image);
+      $('.content-container .column-headers .first-feature').text(json[0].factTags[i].featureContentSpotlight1Title);
+      
+      $('.content-container .second-feature .spotlight').text(json[0].factTags[i].featureContentSpotlight2);
+      $('.content-container .second-feature .content-superscript').text(json[0].factTags[i].featureContentSpotlight2Super);
+      $('.content-container .second-feature .top-content-labels').text(json[0].factTags[i].featureContentSpotlight2Label);
+      $('.content-container .second-feature img').attr('src', contentImgPath + json[0].factTags[i].featureContentSpotlight2Image);
+      $('.content-container .column-headers .second-feature').text(json[0].factTags[i].featureContentSpotlight2Title);
+      
+      $('.content-container .third-feature .spotlight').text(json[0].factTags[i].featureContentSpotlight3);
+      $('.content-container .third-feature .content-superscript').text(json[0].factTags[i].featureContentSpotlight3Super);
+      $('.content-container .third-feature .top-content-labels').text(json[0].factTags[i].featureContentSpotlight3Label);
+      $('.content-container .third-feature img').attr('src', contentImgPath + json[0].factTags[i].featureContentSpotlight3Image);
+      $('.content-container .column-headers .third-feature').text(json[0].factTags[i].featureContentSpotlight3Title);
+    }
+  }
 }
