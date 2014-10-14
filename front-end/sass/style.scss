@@ -234,25 +234,25 @@ img {
         .info-card-prod {
           display: block;
           margin: 0 auto 20px;
-           width:120px; 
-           height:120px;
-         }
-            .main-stage-gradient {
-           min-height: 100px;
-           padding: 20px 15px;
-            }
-            h2 { font-size:3vh; padding-bottom: 2vh; }
-            h3 { font-size:2vh; }
-            sup { 
-            font-size:2vh; 
-            margin-top: -4.5vh
-            }
-            .content {
-           color: #1172c1;
-           font-size: 2vh;
-           line-height: 4vh;
-           padding: 15px
-            }
+          width:120px; 
+          height:120px;
+        }
+        .main-stage-gradient {
+          min-height: 100px;
+          padding: 20px 15px;
+        }
+        h2 { font-size:3vh; padding-bottom: 2vh; }
+        h3 { font-size:2vh; }
+        sup { 
+          font-size:2vh; 
+          margin-top: -4.5vh
+        }
+        .content {
+          color: #1172c1;
+          font-size: 2vh;
+          line-height: 4vh;
+          padding: 15px
+        }
         @media screen and (orientation: portrait) { 
           width: 100vw;
         }
