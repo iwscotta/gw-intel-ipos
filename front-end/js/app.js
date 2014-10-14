@@ -167,9 +167,10 @@ function updateMinorNav(id) {
   $('.nav2-icon-selected').removeClass('nav2-icon-selected');
   $('.nav2-icon[data-navId="'+id+'"]').addClass('nav2-icon-selected');
 }
-
+$(".nav2-container").hide();
 function hideInfoCard() {
   $(this).closest('div.show').removeClass('show');
+  $(".nav2-container").fadeOut("slow");
   $('.pagination-button').parent().show('fast').prev().each(function() {
     if(expandPrice) {
       $(this).animate({ width: priceWidth},'slow');
@@ -180,6 +181,7 @@ function hideInfoCard() {
 function showInfoCard(contentType) {
   //$('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
   $('.info-card').addClass('show');
+  $(".nav2-container").fadeIn("slow");
   //Show/hide pagnation button and optionally expand the price container.
   $('.pagination-button').parent().hide('slow').prev().each(function() {
     priceWidth = $(this).css('width');;
