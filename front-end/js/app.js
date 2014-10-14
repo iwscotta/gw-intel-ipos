@@ -127,7 +127,7 @@ function startMovie(movie) {
   currentMovieHolder.closest('.animation-holder').css('display', 'block');
   currentMovie.play();
   //HACK TO GET MOVIE TO SCALE PROPERLY..
-  $(window).trigger('resize');
+  //$(window).trigger('resize');
 }
 
 function animationComplete() {

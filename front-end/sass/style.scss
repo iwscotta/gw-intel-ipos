@@ -294,6 +294,7 @@ img {
       width: $feature-navigation-area-width;
       @media screen and (orientation: portrait) { 
         height: $vertical-single-item-height;
+        width: $app-width;
       }
       .nav-icon, .callout {
         display: inline-block;
@@ -692,7 +693,7 @@ img {
           padding-bottom: 2vh;
         }
         .overview-label {
-          font-size: 1.66vw;
+          font-size: 1.95vw;
           width:54vw;
         }
         .content-icon {
