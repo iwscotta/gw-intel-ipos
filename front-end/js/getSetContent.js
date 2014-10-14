@@ -10,6 +10,8 @@ var priceCents;
 var deviceCamera;
 var configData;
 var contentImgPath = 'images/content/';
+var configFactTags;
+
 
 function getDeviceData() {
   $.ajax({
@@ -26,12 +28,24 @@ function getDeviceData() {
       priceDollars = json[0].entities[2].info.priceDollars;
       priceCents = json[0].entities[2].info.priceCents;
       configData = json;
+      configFactTags = json[0].factTags;
       populateMarkup();
     }
   });
 }
 
+function getDeviceInfo(item) {
+  var result = false;
+  $.each(configFactTags, function(i, tag) {
+    if (tag.name === item) {
+      result = tag.details.featureNavRolloverInfo;
+    }
+  });
+  return result;
+}
+
 function populateMarkup() {
+  var rolloverInfo;
   $.ajax({
     type: 'GET',
     url: 'data/Profile.xml',
@@ -42,6 +56,8 @@ function populateMarkup() {
       deviceProcessor = $(iposCpu).find('name').text();
       var chipTitle = '<span class="feature-nav-label">Processor<br /></span>';
       $('<p></p>').html(chipTitle + deviceProcessor).appendTo('.processor');
+      rolloverInfo = getDeviceInfo('processor');
+      $('.processor .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText.replace('%','<span>%</span>') + '</div><p>' + rolloverInfo.featureText + '</p>')
 
       var memoryTitle = '<span class="feature-nav-label">Memory<br /></span>';
   		var iposStorage = $(xml).find('storage');
@@ -49,22 +65,30 @@ function populateMarkup() {
       deviceRam = Math.ceil(+deviceRam / 1024) + 'GB';
       iposRam = deviceRam + ' RAM';
       $('<p></p>').html(memoryTitle + iposRam).appendTo('.memory');
-    
+      rolloverInfo = getDeviceInfo('memory');
+      $('.memory .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText.replace('%','<span>%</span>') + '</div><p>' + rolloverInfo.featureText + '</p>')
+
       //Graphics
       $(xml).find('graphics').each(function() {
         var graphicsTitle = '<span class="feature-nav-label">Graphics<br /></span>';
         var iposGraphicsDescription = this.getAttribute('inUseDescription');
         $('<p></p>').html(graphicsTitle + iposGraphicsDescription).appendTo('.graphics');
       });
-    
+      rolloverInfo = getDeviceInfo('graphics');
+      $('.graphics .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
+
       //Camera
       var cameraTitle = '<span class="feature-nav-label">Camera<br /></span>';
       $('<p></p>').html(cameraTitle + deviceCamera).appendTo('.camera');
-    
+      rolloverInfo = getDeviceInfo('camera');
+      $('.camera .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
+
       //Device type
       var deviceTitle = '<span class="feature-nav-label">Device<br /></span>';
       $('<p></p>').html(deviceTitle + 'Tablet').appendTo('.device');
-    
+      rolloverInfo = getDeviceInfo('device');
+      $('.device .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
+
       $(iposStorage).find('diskDrives').find('drive').each(function(i) {
         if(i == 0){
           var storageTitle = '<span class="feature-nav-label">Storage<br /></span>';
@@ -73,17 +97,23 @@ function populateMarkup() {
           $('<p></p>').html(storageTitle + iposDiscCapacity).appendTo('.hard-drive');
         }
       });
-    
+      rolloverInfo = getDeviceInfo('hard-drive');
+      $('.hard-drive .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
+
       // OS
       var osTitle = '<span class="feature-nav-label">Operating System<br /></span>';
       var iposOS = $(xml).find('operatingSystem');
       deviceOS = $(iposOS).find('name').text();
       $('<p></p>').html(osTitle + deviceOS).appendTo('.os');
-      
+      rolloverInfo = getDeviceInfo('os');
+      $('.os .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
+
       // Security
       var peripheralTitle = '<span class="feature-nav-label">Security<br /></span>';
       $('<p></p>').html(peripheralTitle + deviceSecurity).appendTo('.security');
-      
+      rolloverInfo = getDeviceInfo('security');
+      $('.security .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
+
       $('.dollars').text(priceDollars + '.');
       $('.cents').text(priceCents);
       

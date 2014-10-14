@@ -9,6 +9,7 @@ Imports
 Vars
 ---------------------------------------------------------------------- */
 
+
 $light-grey-border: #cddae6;
 $intel-light-orange: #fed11c;
 $intel-orange: #fbb731;
@@ -199,7 +200,13 @@ img {
     margin-top: 0;
     div {
       @extend .regular-font;
-      margin-bottom: $vertical-spacer;
+      //margin-bottom: $vertical-spacer;
+      @media screen and (orientation: portrait) { 
+        //margin-bottom: $portrait-vertical-spacer;
+      }
+    }
+    .menu-item {
+      margin-bottom: 2vh;
       @media screen and (orientation: portrait) { 
         margin-bottom: $portrait-vertical-spacer;
       }
@@ -234,25 +241,25 @@ img {
         .info-card-prod {
           display: block;
           margin: 0 auto 20px;
-          width:120px; 
-          height:120px;
-        }
-        .main-stage-gradient {
-          min-height: 100px;
-          padding: 20px 15px;
-        }
-        h2 { font-size:3vh; padding-bottom: 2vh; }
-        h3 { font-size:2vh; }
-        sup { 
-          font-size:2vh; 
-          margin-top: -4.5vh
-        }
-        .content {
-          color: #1172c1;
-          font-size: 2vh;
-          line-height: 4vh;
-          padding: 15px
-        }
+           width:120px; 
+           height:120px;
+         }
+            .main-stage-gradient {
+           min-height: 100px;
+           padding: 20px 15px;
+            }
+            h2 { font-size:3vh; padding-bottom: 2vh; }
+            h3 { font-size:2vh; }
+            sup { 
+            font-size:2vh; 
+            margin-top: -4.5vh
+            }
+            .content {
+           color: #1172c1;
+           font-size: 2vh;
+           line-height: 4vh;
+           padding: 15px
+            }
         @media screen and (orientation: portrait) { 
           width: 100vw;
         }
@@ -288,7 +295,7 @@ img {
       @media screen and (orientation: portrait) { 
         height: $vertical-single-item-height;
       }
-      .nav-icon {
+      .nav-icon, .callout {
         display: inline-block;
         float: left;
         margin: $vertical-spacer*.75;
@@ -309,6 +316,40 @@ img {
           font-size: $portrait-feature-nav-font-size;
         }
       }
+      .callout {
+        @extend .thin-font;
+        font-size: 6vh;
+        letter-spacing: -.25vw;
+        max-width: 33% !important;
+        text-align: center;
+        span {
+          display: inline;
+          font-size: 3vh;
+          margin: 0 0 0 5px;
+          vertical-align: super;
+        }
+      }
+      .centered {
+        .callout {
+          font-size: 6vh;
+          margin: $vertical-spacer*.75 0 0 !important;
+          max-width: 100% !important;
+          width: 100%;
+          span {
+            display: inline;
+            font-size: 3vh;
+            vertical-align: super;
+          }
+          & + p {
+            display: inline-block;
+            margin: 0;
+            text-align: center;
+            top: auto;
+            transform: translateY(0);
+            width: 100%;
+          }
+        }
+      }
     }
     .half-width {
       clear: both;
@@ -320,14 +361,14 @@ img {
         }
       }
       .half-width-single-holder {
-        height: 0;
+        //height: 0;
         .single-height {
           height: $horizontal-single-item-height - $vertical-spacer/2;
         }
       }
       .single-height {
         clear: right;
-        .nav-icon {
+        .nav-icon, .callout {
           display: inline-block;
           float: left;
           margin: $vertical-spacer*.75;
@@ -341,7 +382,7 @@ img {
       }
       .double-height {
         height: $horizontal-single-item-height * 2;
-        .nav-icon {
+        .nav-icon, .callout {
           margin: $vertical-spacer*1.75;
           max-height: $horizontal-single-item-height * 1.25 - $vertical-spacer*2;
           max-width: $horizontal-single-item-height * 1.25 - $vertical-spacer*2;
@@ -371,6 +412,26 @@ img {
         margin: 0 $portrait-gutter;
         @media screen and (orientation: portrait) { 
           font-size: $portrait-feature-nav-font-size;
+        }
+      }
+      .callout {
+        @include vertical-align;
+        @extend .thin-font;
+        font-size: 12vh;
+        letter-spacing: -.5vw;
+        text-align: center;
+        width: 100%;
+        span {
+          display: inline;
+          font-size: 3vh;
+          margin: 0 0 0 5px;
+          vertical-align: super;
+        }
+        & + p {
+          display: inline-block;
+          margin: 0;
+          text-align: center;
+          width: 100%;
         }
       }
     }
@@ -686,39 +747,39 @@ Basic Swiper Styles
 ================================================================*/
 .swiper-container {
   backface-visibility: hidden;
-	margin: 0 auto;
-	overflow: hidden;
-	position: relative;
-	z-index: 1;
-	-ms-backface-visibility: hidden;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  -ms-backface-visibility: hidden;
 }
 .swiper-wrapper {
-	position: relative;
-	transition-property: transform, left, top;
-	transition-duration: 0s;
-	transform: translate3d(0px,0,0);
-	transition-timing-function: ease;
-	width: 100%;
-	-ms-transition-property:-ms-transform, left, top;
-	-ms-transition-duration:0s;
-	-ms-transform:translate3d(0px,0,0);
-	-ms-transition-timing-function:ease;
+  position: relative;
+  transition-property: transform, left, top;
+  transition-duration: 0s;
+  transform: translate3d(0px,0,0);
+  transition-timing-function: ease;
+  width: 100%;
+  -ms-transition-property:-ms-transform, left, top;
+  -ms-transition-duration:0s;
+  -ms-transform:translate3d(0px,0,0);
+  -ms-transition-timing-function:ease;
 }
 .swiper-free-mode > .swiper-wrapper {
-	transition-timing-function: ease-out;
-	margin: 0 auto;
-	-ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+  -ms-transition-timing-function: ease-out;
 }
 .swiper-slide {
-	float: left;
+  float: left;
 }
 
 /* IE10 Windows Phone 8 Fixes */
 .swiper-wp8-horizontal {
-	-ms-touch-action: pan-y;
+  -ms-touch-action: pan-y;
 }
 .swiper-wp8-vertical {
-	-ms-touch-action: pan-x;
+  -ms-touch-action: pan-x;
 }
 
 /* ===============================================================
@@ -726,16 +787,16 @@ Basic Swiper Styles
 ================================================================*/
 
 .swiper-container, .swiper-wrapper, .swiper-slide {
-	transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
 }
-.swiper-container {	
-	perspective: 1200px;
-	-ms-perspective: 1200px;
+.swiper-container { 
+  perspective: 1200px;
+  -ms-perspective: 1200px;
 }
 .swiper-wrapper {
-	/* Windows 8 IE 10 fix */
-	-ms-perspective: 1200px;
+  /* Windows 8 IE 10 fix */
+  -ms-perspective: 1200px;
 }
 
 
@@ -743,21 +804,21 @@ Basic Swiper Styles
   height: 100%;
   left: 0;
   pointer-events: none;
-	position: absolute;
-	top: 0;
-	width: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
-.swiper-slide-shadow-left {	
-	background-image: linear-gradient(to left, rgba(0,0,0,0.15), rgba(0,0,0,0));
+.swiper-slide-shadow-left { 
+  background-image: linear-gradient(to left, rgba(0,0,0,0.15), rgba(0,0,0,0));
 }
 .swiper-slide-shadow-right {
-	background-image: linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0));	
+  background-image: linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0)); 
 }
-.swiper-slide-shadow-top {	
-	background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+.swiper-slide-shadow-top {  
+  background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
 }
-.swiper-slide-shadow-bottom {	
-	background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+.swiper-slide-shadow-bottom { 
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
 }
 
 /* ===============================================================
@@ -765,18 +826,18 @@ Custom carousel styles
 ================================================================*/
 .swiper-container {
   height: $carousel-item-height;
-	padding: $carousel-item-height/2 0;
-	@media screen and (orientation: portrait) { 
+  padding: $carousel-item-height/2 0;
+  @media screen and (orientation: portrait) { 
     height: $carousel-item-height/1.8;
-   	padding: 9vh 0;
+    padding: 9vh 0;
   }
 }
 .swiper-slide {
   @include background-image($light-blue-gradient);
 }
 .swiper-slide-active + div {
-	/* @include background-image($orange-gradient); */
-	z-index: 10000 !important;
+  /* @include background-image($orange-gradient); */
+  z-index: 10000 !important;
 }
 .swiper-container .swiper-slide .slide-label {
   font-size: 3vh;
@@ -784,5 +845,45 @@ Custom carousel styles
   text-align: center;
   @media screen and (orientation: portrait) { 
     margin-top: $carousel-item-height/1.6;
+  }
+}
+
+/* ===============================================================
+Start Button 3d transform effect
+================================================================*/
+
+.menu-item-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0px auto;
+}
+
+.features-nav-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    transition: all 0.2s ease-out;
+}
+
+.menu-item-front {
+  transform: rotateX(0deg);
+}
+
+.menu-item-back {
+    transform: rotateX(-90deg);
+    top: 100% !important;
+}
+
+.menu-item:hover {
+  .menu-item-container {
+    .menu-item-front {
+      transform: rotateX(-90deg) translateY(-100%);
+    }
+    .menu-item-back {
+      transform: rotateX(0deg) translateY(-100%);
+    }
   }
 }

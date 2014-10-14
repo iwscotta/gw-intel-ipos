@@ -76,6 +76,14 @@ function alignDivContent() {
       $(this).width(newPWidth);
     }
   });
+  $('.menu-item-back p').each(function() {
+    if (!$(this).parent().hasClass('centered') && !$(this).closest('.double-height').length) {
+      var parentWidth = $(this).parent().width();
+      var imgWidth = $(this).siblings('.callout').width();
+      var newPWidth = parentWidth - imgWidth * 1.75;
+      $(this).width(newPWidth);
+    }
+  });
   $('.double-height img').each(function() {
     var contWidth = $(this).parent().width();
     var margin = (contWidth - $(this).width()) / 2;
