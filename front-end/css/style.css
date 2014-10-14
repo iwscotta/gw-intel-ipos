@@ -325,6 +325,7 @@ img {
 /* line 252, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .features-nav .info-card h3 {
   font-size: 2vh;
+  text-transform: capitalize;
 }
 /* line 253, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .features-nav .info-card sup {

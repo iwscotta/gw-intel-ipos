@@ -11,10 +11,6 @@ var deviceCamera;
 var configData;
 var contentImgPath = 'images/content/';
 var configFactTags;
-var infoCardImage;
-var infoCardProductName;
-var infoCardHeader;
-var infoCardCopy;
 
 function getDeviceData() {
   $.ajax({
@@ -32,10 +28,6 @@ function getDeviceData() {
       priceCents = json[0].entities[2].info.priceCents;
       configData = json;
       configFactTags = json[0].factTags;
-      infoCardImage = json[0].factTags[1].featureCardImage;
-      infoCardProductName = json[0].factTags[1].featureCardProductName;
-      infoCardHeader = json[0].factTags[1].featureCardHeader;
-      infoCardCopy = json[0].factTags[1].featureCardCopy;
       populateMarkup();
     }
   });
@@ -121,13 +113,6 @@ function populateMarkup() {
       rolloverInfo = getDeviceInfo('security');
       $('.security .menu-item-back').append('<div class="callout">' + rolloverInfo.calloutText + '</div><p>' + rolloverInfo.featureText + '</p>')
 
-      // Info Card
-      var infoCardImageString = "images/icons/processor/" + infoCardImage;
-      $('.info-card img:eq(2)').attr("src", infoCardImageString);
-      $('.info-card h2').text(infoCardProductName);
-      $('.info-card > .content > p').text(infoCardCopy);
-      $('.info-card > .content > h2').text(infoCardHeader);
-
       $('.dollars').text(priceDollars + '.');
       $('.cents').text(priceCents);
       
@@ -174,6 +159,14 @@ function setSelectedContent(selectedSection) {
       $('.content-container .third-feature .top-content-labels').text(json[0].factTags[i].featureContentSpotlight3Label);
       $('.content-container .third-feature img').attr('src', contentImgPath + json[0].factTags[i].featureContentSpotlight3Image);
       $('.content-container .column-headers .third-feature').text(json[0].factTags[i].featureContentSpotlight3Title);
+      
+      // Info Card
+      var infoCardImageString = "images/icons/" + json[0].factTags[i].featureCardImage;
+      $('.info-card-prod').attr("src", infoCardImageString);
+      $('.info-card h3').text(selectedSection);
+      $('.info-card h2').text(json[0].factTags[i].featureCardProductName);
+      $('.info-card > .content > p').text(json[0].factTags[i].featureCardCopy);
+      $('.info-card > .content > h2').text(json[0].factTags[i].featureCardHeader);
     }
   }
 }
