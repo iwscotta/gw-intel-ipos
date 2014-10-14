@@ -248,6 +248,8 @@ img {
           height:20vh;
           @media screen and (orientation: portrait) { 
           	float:left;
+          	width:10vh; 
+            height:10vh;
           }
         }
         .main-stage-gradient {
@@ -256,11 +258,18 @@ img {
           @media screen and (orientation: portrait) {
           	float:left;
           	height: $vertical-single-item-height*3 + $portrait-vertical-spacer*2; /* dmoxin */
-  	  	    width: 35vw;
+  	  	    width: 28vw;
           }
         }
-        h2 { font-size:3vh; padding-bottom: 2vh; }
-        h3 { font-size:2vh; }
+        h2 { 
+          font-size:3vh; padding-bottom: 2vh;
+          @media screen and (orientation: portrait) {
+          	font-size:2vh;
+          }
+        }
+        h3 { 
+          font-size:2vh;
+        }
         sup { 
           font-size:2vh; 
           margin-top: -4.5vh
@@ -272,7 +281,14 @@ img {
           padding: 15px;
           @media screen and (orientation: portrait) {
           	float:left;
-  	  	width: 45vw;
+  	  	    width: 55vw;
+  	  	    h2 {
+  	  	      font-size: 2.1vh;
+  	  	    }
+  	  	    p {
+  	  	      font-size: 1.8vh;
+  	  	      line-height: 2vh;
+  	  	    }
           }
         }
         @media screen and (orientation: portrait) { 
