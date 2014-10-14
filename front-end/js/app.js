@@ -159,7 +159,7 @@ function updateMinorNav(id) {
 }
 
 function hideInfoCard() {
-  $(this).parent().removeClass('show');
+  $(this).closest('div.show').removeClass('show');
   $('.pagination-button').parent().show('fast').prev().each(function() {
     if(expandPrice) {
       $(this).animate({ width: priceWidth},'slow');
@@ -168,7 +168,7 @@ function hideInfoCard() {
 }
 
 function showInfoCard(contentType) {
-  $('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
+  //$('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
   $('.info-card').addClass('show');
   //Show/hide pagnation button and optionally expand the price container.
   $('.pagination-button').parent().hide('slow').prev().each(function() {
