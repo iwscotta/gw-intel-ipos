@@ -23,10 +23,11 @@
 			{
 				"name": "processor",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": {
-					"calloutText": "",
-					"featureText": ""
-				},
+				"featureNavRolloverInfo": 
+					{
+						"calloutText": "26%",
+            "featureText": "Faster Media Creation"
+					},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -51,10 +52,11 @@
 			},{
 				"name": "memory",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": {
-					"calloutText": "",
-					"featureText": ""
-				},
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "20%",
+            "featureText": "Faster Downloads"
+					},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -79,10 +81,11 @@
 			},{
 				"name": "graphics",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": {
-					"calloutText": "",
-					"featureText": ""
-				},
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "2X",
+            "featureText": "Greater Bandwidth"
+					},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -107,10 +110,11 @@
 			},{
 				"name": "camera",
 				"featureNavInfo": "8MP rear + 2MP front",
-				"featureNavRolloverInfo": {
-					"calloutText": "",
-					"featureText": ""
-				},
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "1080p",
+            "featureText": "HD video cameras"
+					},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -135,10 +139,11 @@
 			},{
 				"name": "device",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": {
-					"calloutText": "",
-					"featureText": ""
-				},
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "10.8",
+            "featureText": "HD Screen"
+					},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -163,10 +168,11 @@
 			},{
 				"name": "hard-drive",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": {
-					"calloutText": "",
-					"featureText": ""
-				},
+				"featureNavRolloverInfo":
+					{
+						"calloutText": "15,000+",
+            "featureText": "Songs"
+					},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -191,10 +197,11 @@
 			},{
 				"name": "os",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": {
-					"calloutText": "",
-					"featureText": ""
-				},
+				"featureNavRolloverInfo": 
+					{
+						"calloutText": "One Drive",
+	          "featureText": "Cloud Storage"
+					},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -219,10 +226,11 @@
 			},{
 				"name": "security",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": {
-					"calloutText": "",
-					"featureText": ""
-				},
+				"featureNavRolloverInfo":
+						{
+							"calloutText": "20%",
+	            "featureText": "Cloud Storage"
+						},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
