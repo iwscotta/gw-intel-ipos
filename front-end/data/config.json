@@ -23,7 +23,10 @@
 			{
 				"name": "processor",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo": {
+					"calloutText": "",
+					"featureText": ""
+				},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -48,7 +51,10 @@
 			},{
 				"name": "memory",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo": {
+					"calloutText": "",
+					"featureText": ""
+				},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -73,7 +79,10 @@
 			},{
 				"name": "graphics",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo": {
+					"calloutText": "",
+					"featureText": ""
+				},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -98,7 +107,10 @@
 			},{
 				"name": "camera",
 				"featureNavInfo": "8MP rear + 2MP front",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo": {
+					"calloutText": "",
+					"featureText": ""
+				},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -123,7 +135,10 @@
 			},{
 				"name": "device",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo": {
+					"calloutText": "",
+					"featureText": ""
+				},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -148,7 +163,10 @@
 			},{
 				"name": "hard-drive",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo": {
+					"calloutText": "",
+					"featureText": ""
+				},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -173,7 +191,10 @@
 			},{
 				"name": "os",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo": {
+					"calloutText": "",
+					"featureText": ""
+				},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",
@@ -198,7 +219,10 @@
 			},{
 				"name": "security",
 				"featureNavInfo": "",
-				"featureNavRolloverInfo": "",
+				"featureNavRolloverInfo": {
+					"calloutText": "",
+					"featureText": ""
+				},
 				"featureNavIcon": "",
 				"featureCardIcon": "",
 				"featureCardCopy": "",

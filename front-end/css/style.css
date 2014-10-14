@@ -296,13 +296,13 @@ img {
   bottom: -100%;
   height: 68vh;
   margin: 0px;
-  position: relative;
+  position: absolute;
   transition: 1s;
   width: 30vw;
 }
 /* line 230, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .features-nav .info-card.show {
-  bottom: 70vh;
+  bottom: 15.6vh;
 }
 @media screen and (orientation: portrait) {
   /* line 223, ../sass/style.scss */
