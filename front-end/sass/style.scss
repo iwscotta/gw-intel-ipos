@@ -244,18 +244,19 @@ img {
         .info-card-prod {
           display: block;
           margin: 0 auto 20px;
-          width:20vw; 
-          height:20vw;
+          width:20vh; 
+          height:20vh;
           @media screen and (orientation: portrait) { 
           	float:left;
           }
         }
         .main-stage-gradient {
+          height: 16.5vw;
           padding: 20px 15px;
           @media screen and (orientation: portrait) {
           	float:left;
           	height: $vertical-single-item-height*3 + $portrait-vertical-spacer*2; /* dmoxin */
-  	  	width: 35vw;
+  	  	    width: 35vw;
           }
         }
         h2 { font-size:3vh; padding-bottom: 2vh; }

@@ -163,7 +163,7 @@ function setSelectedContent(selectedSection) {
       // Info Card
       var infoCardImageString = "images/icons/" + json[0].factTags[i].featureCardImage;
       $('.info-card-prod').attr("src", infoCardImageString);
-      $('.info-card h3').text(selectedSection);
+      $('.info-card h3').text(selectedSection).css('text-transform', 'capitalize');
       $('.info-card h2').text(json[0].factTags[i].featureCardProductName);
       $('.info-card > .content > p').text(json[0].factTags[i].featureCardCopy);
       $('.info-card > .content > h2').text(json[0].factTags[i].featureCardHeader);
