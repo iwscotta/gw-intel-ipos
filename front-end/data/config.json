@@ -13,7 +13,9 @@
 				"info": {
 					"deviceWidth": "15 inches",
 					"deviceType": "Tablet",
-					"security": "Device security info"
+					"security": "Device security info",
+					"priceDollars": "799",
+					"priceCents": "99"
 				}
 			}
 		],

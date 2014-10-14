@@ -5,6 +5,8 @@ var deviceOS;
 var deviceWidth;
 var deviceType;
 var deviceSecurity;
+var priceDollars;
+var priceCents;
 var deviceCamera;
 var configData;
 var contentImgPath = 'images/content/';
@@ -21,6 +23,8 @@ function getDeviceData() {
       deviceType = json[0].entities[2].info.deviceType;
       deviceSecurity = json[0].entities[2].info.security;
       deviceCamera = json[0].factTags[3].featureNavInfo;
+      priceDollars = json[0].entities[2].info.priceDollars;
+      priceCents = json[0].entities[2].info.priceCents;
       configData = json;
       populateMarkup();
     }
@@ -79,6 +83,9 @@ function populateMarkup() {
       // Security
       var peripheralTitle = '<span class="feature-nav-label">Security<br /></span>';
       $('<p></p>').html(peripheralTitle + deviceSecurity).appendTo('.security');
+      
+      $('.dollars').text(priceDollars + '.');
+      $('.cents').text(priceCents);
       
       $('.single-height p').each(function() {
         var parentWidth = $(this).parent().width();

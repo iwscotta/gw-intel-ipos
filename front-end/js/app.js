@@ -28,31 +28,32 @@ $(document).ready(function () {
     verticallyCenterAnimation();
     alignDivContent();
   }
-  
-  // TODO - ADD TOUCH LISTENERS..
+
   $(document).mousemove(function(){
-      clearTimeout(activeTimeout);
-      if (attractLoopActive) {
-          stopAttractLoop();
-      }
-      activeTimeout = setTimeout(function(){
-          startAttractLoop();
-      }, 1000 * idleTime);			
+    clearTimeout(activeTimeout);
+    if (attractLoopActive) {
+        stopAttractLoop();
+    }
+    activeTimeout = setTimeout(function(){
+        startAttractLoop();
+    }, 1000 * idleTime);			
   });
 
 });
 
 function startAttractLoop(){
+  $('.info-card-closer').trigger('click');
   currentMovie.stop(1);
   currentMovieHolder.closest('.animation-holder').css('display', 'none');
   attractLoopActive = true;
   startMovie(attractionMovie);
+  selectedSection = null;
 }
 
 function stopAttractLoop(){
   resetButtons();
   currentMovie.stop(1);
-  animationComplete();
+  currentMovieHolder.closest('.animation-holder').css('display', 'none');
   attractLoopActive = false;
 }
 
@@ -107,7 +108,6 @@ function setAnimationObject(compId) {
 }
 
 function startMovie(movie) {
-  //TODO: DO NOT RESTART CURRENT MOVIE...
   if(currentMovie != undefined){
     currentMovie.stop(1);
     currentMovieHolder.closest('.animation-holder').css('display', 'none');
@@ -159,7 +159,6 @@ function updateMinorNav(id) {
 }
 
 function hideInfoCard() {
-  //Slowly hide the item, while 'quickly' showing the pagnation button
   $(this).parent().removeClass('show');
   $('.pagination-button').parent().show('fast').prev().each(function() {
     if(expandPrice) {
@@ -169,7 +168,6 @@ function hideInfoCard() {
 }
 
 function showInfoCard(contentType) {
-  //Get content type and append
   $('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
   $('.info-card').addClass('show');
   //Show/hide pagnation button and optionally expand the price container.
@@ -210,23 +208,33 @@ function setListeners() {
   //http://www.idangero.us/sliders/swiper/api.php
 
   $('.features-nav-item').click(function(evt) {
-    resetButtons();
-    selectedSection = $(this).attr('id');
-    showInfoCard(selectedSection);
-    updateMinorNav(selectedSection);
-    setSelectedContent(selectedSection);
-    $('.swiper-container').hide();
-    //if(attractLoopActive) {
-      //animationComplete();
-    //}else {
+    // Do nothing if current button is clicked
+    if(selectedSection != $(this).attr('id')) {
+      resetButtons();
+      $('.swiper-container').hide();
+      selectedSection = $(this).attr('id');
+      showInfoCard(selectedSection);
+      updateMinorNav(selectedSection);
+      setSelectedContent(selectedSection);
       var thisMovie = selectedSection + 'Movie';
       var selectedMovie = window[thisMovie];
-      if(selectedMovie != undefined){
-        startMovie(selectedMovie);
+      if(attractLoopActive) {
+        currentMovie.stop(1);
+        currentMovieHolder.closest('.animation-holder').css('display', 'none');
+        attractLoopActive = false;
+        if(selectedMovie != undefined) {
+          $('.content-container').fadeIn();
+        }else {
+          startMovie(comingsoonMovie);
+        }
       }else {
-        startMovie(comingsoonMovie);
+        if(selectedMovie != undefined){
+          startMovie(selectedMovie);
+        }else {
+          startMovie(comingsoonMovie);
+        }
       }
-    //}
+    }
   });
   
   $('.nav2-icon').click(function(evt){
@@ -258,19 +266,20 @@ function setListeners() {
   
   $('.info-card-closer').click(function(evt) {
     hideInfoCard.call(this);
-    $('.swiper-container').show();
-    $('.content-container').fadeOut();
+    $('.swiper-container').fadeIn();
+    $('.content-container').hide();
     if(currentMovie != undefined){
       currentMovie.stop(1);
       currentMovieHolder.closest('.animation-holder').css('display', 'none');
     }
     resetButtons();
-    //Perform any other clean-up here
+    selectedSection = null;
   });
   
 }
 
 function navLink(id) {
+  $('.info-card-closer').trigger('click');
   // explore, compare, testdrive
   console.log('main nav, clicked ' + id);
 }
