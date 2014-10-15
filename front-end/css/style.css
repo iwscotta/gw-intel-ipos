@@ -296,7 +296,7 @@ img {
   background: #fff;
   height: 68vh;
   margin: 0px;
-  position: absolute;
+  position: relative;
   bottom: -70vh;
   transition: 1s;
   width: 30vw;
@@ -309,12 +309,12 @@ img {
 }
 /* line 241, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .features-nav .info-card.show {
-  bottom: 16.4vh;
+  bottom: 68vh;
 }
 @media screen and (orientation: portrait) {
   /* line 241, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .features-nav .info-card.show {
-    bottom: 11vh;
+    bottom: 33vh;
   }
 }
 /* line 247, ../sass/style.scss */
