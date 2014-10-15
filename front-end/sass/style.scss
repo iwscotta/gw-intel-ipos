@@ -857,6 +857,7 @@ img {
     img {
       margin: ((($featured-area-width - $gutter*4)/3) - ((($featured-area-width - $gutter*4)/3)*.5))/2.5 0 0 ((($featured-area-width - $gutter*4)/3) - ((($featured-area-width - $gutter*4)/3)*.5))/2;
       max-width: (($featured-area-width - $gutter*4)/3)*.5;
+      max-height: (($featured-area-width - $gutter*4)/3)*.5;
       position: relative;
     }
   }

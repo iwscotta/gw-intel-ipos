@@ -1117,13 +1117,14 @@ img {
 .home-container .slide img {
   margin: 4.14167vw 0 0 5.17708vw;
   max-width: 10.35417vw;
+  max-height: 10.35417vw;
   position: relative;
 }
 
 /* ===============================================================
 Start Button 3d transform effect
 ================================================================*/
-/* line 869, ../sass/style.scss */
+/* line 870, ../sass/style.scss */
 .menu-item-container {
   width: 100%;
   height: 100%;
@@ -1131,7 +1132,7 @@ Start Button 3d transform effect
   margin: 0px auto;
 }
 
-/* line 876, ../sass/style.scss */
+/* line 877, ../sass/style.scss */
 .features-nav-item {
   width: 100%;
   height: 100%;
@@ -1141,22 +1142,22 @@ Start Button 3d transform effect
   transition: all 0.2s ease-out;
 }
 
-/* line 885, ../sass/style.scss */
+/* line 886, ../sass/style.scss */
 .menu-item-front {
   transform: rotateX(0deg);
 }
 
-/* line 889, ../sass/style.scss */
+/* line 890, ../sass/style.scss */
 .menu-item-back {
   transform: rotateX(-90deg);
   top: 100% !important;
 }
 
-/* line 896, ../sass/style.scss */
+/* line 897, ../sass/style.scss */
 .menu-item:hover .menu-item-container .menu-item-front {
   transform: rotateX(-90deg) translateY(-100%);
 }
-/* line 899, ../sass/style.scss */
+/* line 900, ../sass/style.scss */
 .menu-item:hover .menu-item-container .menu-item-back {
   transform: rotateX(0deg) translateY(-100%);
 }
