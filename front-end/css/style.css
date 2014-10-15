@@ -710,12 +710,12 @@ img {
 }
 /* line 539, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width.wide {
-  width: 100%;
+  width: 30vw;
 }
 @media screen and (orientation: portrait) {
   /* line 539, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width.wide {
-    width: 96%;
+    width: 96vw;
   }
 }
 /* line 545, ../sass/style.scss */

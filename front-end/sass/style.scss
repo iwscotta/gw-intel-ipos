@@ -537,9 +537,9 @@ img {
         width: ($app-width/10)*8 - $portrait-gutter;
       }
       &.wide{
-        width:100%;
+        width:30vw;
         @media screen and (orientation: portrait) { 
-          width:96%;
+          width:96vw;
         }
       }      
       .price {
