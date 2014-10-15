@@ -76,7 +76,7 @@ function alignDivContent() {
   });
   $('.menu-item-back p').each(function() {
     var parentWidth = $(this).parent().width();
-    //var imgWidth = $(this).siblings('.callout').width();
+    //var imgWidth = ($(this).siblings('.callout')) ? $(this).siblings('.callout').width() : $(this).siblings('img').width();
     //var newPWidth = parentWidth - imgWidth * 1.75;
     //$(this).width(newPWidth);
   });
@@ -154,7 +154,7 @@ function updateMinorNav(id) {
 function hideInfoCard() {
   $(this).closest('div.show').removeClass('show');
   $(".nav2-container").fadeOut("slow");
-  $('.pagination-button').parent().show('fast').prev().each(function() {
+  $('.pagination-button').parent().removeClass('hide').prev().each(function() {
     if(expandPrice) {
                     $(this).removeClass("wide");
       //$(this).animate({ width: ""},'slow');
@@ -167,7 +167,7 @@ function showInfoCard(contentType) {
   $('.info-card').addClass('show');
   $(".nav2-container").fadeIn("slow");
   //Show/hide pagnation button and optionally expand the price container.
-  $('.pagination-button').parent().hide('slow').prev().each(function() {
+  $('.pagination-button').parent().addClass('hide').prev().each(function() {
     //priceWidth = $(this).css('width');
     if(expandPrice) {
       $(this).addClass("wide");

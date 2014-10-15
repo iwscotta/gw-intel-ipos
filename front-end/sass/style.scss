@@ -598,6 +598,11 @@ img {
       float: left;
       height: 100%;
       width: $feature-navigation-area-width/4;
+      transition:1s;
+      &.hide {
+        height: 0%;
+        width: 0vw;
+      }
       @media screen and (orientation: portrait) { 
         width: $app-width/5 - $portrait-gutter*2;
       }
