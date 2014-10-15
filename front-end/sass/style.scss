@@ -531,10 +531,17 @@ img {
       height: 100%;
       margin-right: $gutter;
       width: ($feature-navigation-area-width/4)*3 - $gutter;
+      transition: .5s ease-out;
       @media screen and (orientation: portrait) { 
         margin-right: $portrait-gutter;
         width: ($app-width/10)*8 - $portrait-gutter;
       }
+      &.wide{
+        width:100%;
+        @media screen and (orientation: portrait) { 
+          width:96%;
+        }
+      }      
       .price {
         @extend .border;
         background: #fff;
@@ -816,143 +823,42 @@ img {
   }
 }
 
-.ipos-wrapper .featured-area .featured-content .swiper-slide img.nav2-icon{
-	height:60%;
-	vertical-align:middle;
-	width:auto;
-	position:relative;
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-.swiper-slide p{
-	text-align:center;
-}
-
-/*
-BELOW THIS LINE IS SWIPER CODE FOR THE CAROUSEL
----------------------------------------------------------------------- */
-
-/*
- * Swiper - Mobile Touch Slider CSS
- * http://www.idangero.us/sliders/swiper
- *
- * Vladimir Kharlampidi, The iDangero.us
- * http://www.idangero.us/
- * 
- * Copyright 2012-2013, Vladimir Kharlampidi
- * The iDangero.us
- * http://www.idangero.us
- *
- * Licensed under GPL & MIT
- *
-*/
-
-/* ===============================================================
-Basic Swiper Styles 
-================================================================*/
-.swiper-container {
-  backface-visibility: hidden;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  -ms-backface-visibility: hidden;
-}
-.swiper-wrapper {
-  position: relative;
-  transition-property: transform, left, top;
-  transition-duration: 0s;
-  transform: translate3d(0px,0,0);
-  transition-timing-function: ease;
-  width: 100%;
-  -ms-transition-property:-ms-transform, left, top;
-  -ms-transition-duration:0s;
-  -ms-transform:translate3d(0px,0,0);
-  -ms-transition-timing-function:ease;
-  -ms-perspective-origin: 0px;
-}
-.swiper-free-mode > .swiper-wrapper {
-  transition-timing-function: ease-out;
-  margin: 0 auto;
-  -ms-transition-timing-function: ease-out;
-}
-.swiper-slide {
-  float: left;
-}
-
-/* IE10 Windows Phone 8 Fixes */
-.swiper-wp8-horizontal {
-  -ms-touch-action: pan-y;
-}
-.swiper-wp8-vertical {
-  -ms-touch-action: pan-x;
-}
-
-/* ===============================================================
-3D
-================================================================*/
-
-.swiper-container, .swiper-wrapper, .swiper-slide {
-  transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-}
-.swiper-container { 
-  perspective: 1200px;
-  -ms-perspective: 1200px;
-}
-.swiper-wrapper {
-  /* Windows 8 IE 10 fix */
-  -ms-perspective-origin:0px;
-}
-
-
-.swiper-slide-shadow-left, .swiper-slide-shadow-right, .swiper-slide-shadow-top, .swiper-slide-shadow-bottom {
-  height: 100%;
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.swiper-slide-shadow-left { 
-  background-image: linear-gradient(to left, rgba(0,0,0,0.15), rgba(0,0,0,0));
-}
-.swiper-slide-shadow-right {
-  background-image: linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-}
-.swiper-slide-shadow-top {  
-  background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
-}
-.swiper-slide-shadow-bottom { 
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
-}
-
-/* ===============================================================
-Custom carousel styles
-================================================================*/
-.swiper-container {
-  height: $carousel-item-height;
-  padding: $carousel-item-height/2 0;
-  @media screen and (orientation: portrait) { 
-    height: $carousel-item-height/1.8;
-    padding: 9vh 0;
+.home-container {
+  .home-intro {
+    margin: 3vh 3vw 6vh;
+    h1 {
+      font-size: 2.6vh;
+      margin-bottom: 1vh;
+    }
+    h2 {
+      font-size: 4vh;
+    }
   }
-}
-.swiper-slide {
-  @include background-image($light-blue-gradient);
-}
-.swiper-slide-active + div {
-  /* @include background-image($orange-gradient); */
-  z-index: 10000 !important;
-}
-.swiper-container .swiper-slide .slide-label {
-  font-size: 3vh;
-  margin-top: $carousel-item-height + $vertical-spacer;
-  text-align: center;
-  @media screen and (orientation: portrait) { 
-    margin-top: $carousel-item-height/1.6;
+  .slide-holder {
+    margin: 0 auto;
+    width: $featured-area-width;
+  }
+  .slide {
+    float: left;
+    height: 20vw;
+    margin-left: $gutter;
+    width: ($featured-area-width - $gutter*4)/3;
+    @media screen and (orientation: portrait) { 
+      margin-left: $gutter;
+    }
+    p {
+      position: relative;
+      text-align: center;
+      top: 14vh;
+      @media screen and (orientation: portrait) { 
+        top: 6vh;
+      }
+    }
+    img {
+      margin: ((($featured-area-width - $gutter*4)/3) - ((($featured-area-width - $gutter*4)/3)*.5))/2.5 0 0 ((($featured-area-width - $gutter*4)/3) - ((($featured-area-width - $gutter*4)/3)*.5))/2;
+      max-width: (($featured-area-width - $gutter*4)/3)*.5;
+      position: relative;
+    }
   }
 }
 

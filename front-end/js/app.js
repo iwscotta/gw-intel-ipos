@@ -1,5 +1,3 @@
-var featuredSwiper;
-var featuredSwiperTwo;
 var carouselIndex;
 var deviceData;
 var $animation;
@@ -19,7 +17,6 @@ var movie, stage, compClass, deviceMovie, memoryMovie, osMovie, processorMovie, 
 $(document).ready(function () {
   $('.compare-container').hide();
   getDeviceData();
-  setCarousel();
   setListeners();
   setOrientation();
   $('.content-container').hide();
@@ -117,7 +114,6 @@ function setAnimationObject(compId) {
 }
 
 function startMovie(movie) {
-  // TODO ACK DEBUG
   if(currentMovie != undefined){
     currentMovie.stop(1);
     currentMovieHolder.closest('.animation-holder').css('display', 'none');
@@ -152,46 +148,32 @@ function setOrientation() {
   }
 }
 
-function setCarousel() {
-  featuredSwiper = $('.featured').swiper({
-    loop: true,
-	  slidesPerView: 3,
-    initialSlide: 2,
-    // TODO: DO NOT TURN OFF IF NOT IE
-    useCSS3Transforms: false,
-		tdFlow: {
-			rotate: 30,
-			stretch: 10,
-			depth: 150
-		}
-	});
-}
-
 function updateMinorNav(id) {
   $('.nav2-icon-selected').removeClass('nav2-icon-selected');
   $('.nav2-icon[data-navId="'+id+'"]').addClass('nav2-icon-selected');
 }
-$(".nav2-container").hide();
+
 function hideInfoCard() {
   $(this).closest('div.show').removeClass('show');
   $(".nav2-container").fadeOut("slow");
   $('.pagination-button').parent().show('fast').prev().each(function() {
     if(expandPrice) {
-      $(this).animate({ width: priceWidth},'slow');
-    }             
+                    $(this).removeClass("wide");
+      //$(this).animate({ width: ""},'slow');
+    }            
   });
 }
-
+ 
 function showInfoCard(contentType) {
   //$('.info-card').find('.content').html('<div>' + contentType + ' content here please!</div>');
   $('.info-card').addClass('show');
   $(".nav2-container").fadeIn("slow");
   //Show/hide pagnation button and optionally expand the price container.
   $('.pagination-button').parent().hide('slow').prev().each(function() {
-    priceWidth = $(this).css('width');;
+    //priceWidth = $(this).css('width');
     if(expandPrice) {
-      $(this).animate({ width: '100%'},'slow');
-    }             
+      $(this).addClass("wide");
+    }            
   });
 }
 
@@ -209,25 +191,42 @@ function setListeners() {
   $('.main-nav').click(function(evt) {
     navLink($(evt.target));
   });
-  
-  $('.swiper-wrapper').click(function(evt) {
-    var active = $('.swiper-slide-active + div');
-    var clickRel = evt.pageX - active.offset().left;
-    if(clickRel < 0){
-      featuredSwiper.swipePrev();
-    }
-    if(clickRel > active.width()){
-      featuredSwiper.swipeNext();
-    }
-  });
-  //featuredSwiper.swipeNext();
-  //http://www.idangero.us/sliders/swiper/api.php
 
   $('.menu-item').click(function(evt) {
     // Do nothing if current button is clicked
     if(selectedSection != $(this).attr('id')) {
       resetButtons();
-      $('.swiper-container').hide();
+      $('.home-container').hide();
+      selectedSection = $(this).attr('id');
+      showInfoCard(selectedSection);
+      updateMinorNav(selectedSection);
+      setSelectedContent(selectedSection);
+      var thisMovie = selectedSection + 'Movie';
+      var selectedMovie = window[thisMovie];
+      if(attractLoopActive) {
+        currentMovie.stop(1);
+        currentMovieHolder.closest('.animation-holder').css('display', 'none');
+        attractLoopActive = false;
+        if(selectedMovie != undefined) {
+          $('.content-container').fadeIn();
+        }else {
+          startMovie(comingsoonMovie);
+        }
+      }else {
+        if(selectedMovie != undefined){
+          startMovie(selectedMovie);
+        }else {
+          startMovie(comingsoonMovie);
+        }
+      }
+    }
+  });
+  
+  $('.slide').click(function(evt) {
+    // Do nothing if current button is clicked
+    if(selectedSection != $(this).attr('id')) {
+      resetButtons();
+      $('.home-container').hide();
       selectedSection = $(this).attr('id');
       showInfoCard(selectedSection);
       updateMinorNav(selectedSection);
@@ -282,7 +281,7 @@ function setListeners() {
   
   $('.info-card-closer').click(function(evt) {
     hideInfoCard.call(this);
-    $('.swiper-container').fadeIn();
+    $('.home-container').fadeIn();
     $('.content-container').hide();
     if(currentMovie != undefined){
       currentMovie.stop(1);
@@ -302,7 +301,7 @@ function navLink(ele) {
   $(ele).addClass('active');
   if($(ele).data('id') == 'explore') {
     $('.compare-container').hide();
-    $('.swiper-container').fadeIn();
+    $('.home-container').fadeIn();
     $('.content-container').hide();
     stopAttractLoop();
     selectedSection = null;

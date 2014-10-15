@@ -699,6 +699,7 @@ img {
   height: 100%;
   margin-right: 1.125vw;
   width: 21.375vw;
+  transition: .5s ease-out;
 }
 @media screen and (orientation: portrait) {
   /* line 529, ../sass/style.scss */
@@ -707,7 +708,17 @@ img {
     width: 78vw;
   }
 }
-/* line 538, ../sass/style.scss */
+/* line 539, ../sass/style.scss */
+.ipos-wrapper .feature-navigation-area .three-quarter-width.wide {
+  width: 100%;
+}
+@media screen and (orientation: portrait) {
+  /* line 539, ../sass/style.scss */
+  .ipos-wrapper .feature-navigation-area .three-quarter-width.wide {
+    width: 96%;
+  }
+}
+/* line 545, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width .price {
   background: #fff;
   color: #1172c1;
@@ -721,12 +732,12 @@ img {
   z-index: 100;
 }
 @media screen and (orientation: portrait) {
-  /* line 538, ../sass/style.scss */
+  /* line 545, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width .price {
     padding: 0 2vw 0;
   }
 }
-/* line 553, ../sass/style.scss */
+/* line 560, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width .price .price-label {
   font-size: 1.8vh;
   margin: 0 .8vw;
@@ -734,14 +745,14 @@ img {
   top: -4.5vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 553, ../sass/style.scss */
+  /* line 560, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width .price .price-label {
     font-size: 1.8vh;
     margin: 0 .8vw;
     top: -4.5vh;
   }
 }
-/* line 564, ../sass/style.scss */
+/* line 571, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width .price .large-price {
   font-size: 7vh;
   letter-spacing: -.4vw;
@@ -750,13 +761,13 @@ img {
   top: -1.2vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 564, ../sass/style.scss */
+  /* line 571, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width .price .large-price {
     letter-spacing: -.8vw;
     line-height: 9vh;
   }
 }
-/* line 575, ../sass/style.scss */
+/* line 582, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .three-quarter-width .price .small-price {
   font-size: 3vh;
   letter-spacing: -.1vw;
@@ -765,7 +776,7 @@ img {
   top: -4vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 575, ../sass/style.scss */
+  /* line 582, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .three-quarter-width .price .small-price {
     font-size: 3vh;
     letter-spacing: -.1vw;
@@ -773,25 +784,25 @@ img {
     top: -4vh;
   }
 }
-/* line 590, ../sass/style.scss */
+/* line 597, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width {
   float: left;
   height: 100%;
   width: 7.5vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 590, ../sass/style.scss */
+  /* line 597, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .one-quarter-width {
     width: 16vw;
   }
 }
-/* line 597, ../sass/style.scss */
+/* line 604, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button {
   height: 100%;
   float: left;
   width: 100%;
 }
-/* line 601, ../sass/style.scss */
+/* line 608, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button .right {
   position: relative;
   top: 50% !important;
@@ -807,11 +818,11 @@ img {
   transform: rotate(-45deg);
   transition: 0.2s ease-in;
 }
-/* line 615, ../sass/style.scss */
+/* line 622, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button .right.down {
   transform: rotate(45deg);
 }
-/* line 619, ../sass/style.scss */
+/* line 626, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button .left {
   position: relative;
   top: 50% !important;
@@ -827,11 +838,11 @@ img {
   transform: rotate(45deg);
   transition: 0.2s ease-in;
 }
-/* line 633, ../sass/style.scss */
+/* line 640, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .one-quarter-width .pagination-button .left.down {
   transform: rotate(-45deg);
 }
-/* line 640, ../sass/style.scss */
+/* line 647, ../sass/style.scss */
 .ipos-wrapper .featured-area {
   float: right;
   font-size: 2vw;
@@ -839,20 +850,20 @@ img {
   width: 66.625vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 640, ../sass/style.scss */
+  /* line 647, ../sass/style.scss */
   .ipos-wrapper .featured-area {
     float: left;
     width: 100vw;
   }
 }
-/* line 649, ../sass/style.scss */
+/* line 656, ../sass/style.scss */
 .ipos-wrapper .featured-area .main-nav {
   height: 12.4vh;
   margin-bottom: 2vh;
   position: relative;
 }
 @media screen and (orientation: portrait) {
-  /* line 649, ../sass/style.scss */
+  /* line 656, ../sass/style.scss */
   .ipos-wrapper .featured-area .main-nav {
     overflow: hidden;
     /* NECESSARY? */
@@ -860,17 +871,17 @@ img {
     margin-bottom: 0.9vh;
   }
 }
-/* line 658, ../sass/style.scss */
+/* line 665, ../sass/style.scss */
 .ipos-wrapper .featured-area .main-nav .middle {
   margin: 0 1.125vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 658, ../sass/style.scss */
+  /* line 665, ../sass/style.scss */
   .ipos-wrapper .featured-area .main-nav .middle {
     margin: 0 2vw;
   }
 }
-/* line 664, ../sass/style.scss */
+/* line 671, ../sass/style.scss */
 .ipos-wrapper .featured-area .main-nav a {
   display: block;
   float: left;
@@ -880,25 +891,25 @@ img {
   line-height: 11.4vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 664, ../sass/style.scss */
+  /* line 671, ../sass/style.scss */
   .ipos-wrapper .featured-area .main-nav a {
     width: 30.66667vw;
     line-height: 6.08vh;
   }
 }
-/* line 680, ../sass/style.scss */
+/* line 687, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content {
   height: 80.4vh;
   overflow: hidden;
 }
 @media screen and (orientation: portrait) {
-  /* line 680, ../sass/style.scss */
+  /* line 687, ../sass/style.scss */
   .ipos-wrapper .featured-area .featured-content {
     height: 48vh;
     width: 96vw;
   }
 }
-/* line 687, ../sass/style.scss */
+/* line 694, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .nav2-container {
   top: 88.8vh;
   height: 2vw;
@@ -907,13 +918,13 @@ img {
   z-index: 100000 !important;
 }
 @media screen and (orientation: portrait) {
-  /* line 687, ../sass/style.scss */
+  /* line 694, ../sass/style.scss */
   .ipos-wrapper .featured-area .featured-content .nav2-container {
     top: 59.05vh;
     height: 4vw;
   }
 }
-/* line 698, ../sass/style.scss */
+/* line 705, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .nav2-icon {
   background: url("../images/icons/icon-circle.svg") no-repeat center 600px;
   background-size: 100% 100%;
@@ -923,326 +934,196 @@ img {
   width: 3vw;
   /* transition: background 0.5s ease-in-out; */
 }
-/* line 707, ../sass/style.scss */
+/* line 714, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .nav2-icon-selected {
   background: url("../images/icons/icon-circle.svg") no-repeat center top;
   background-size: 100% 100%;
 }
-/* line 711, ../sass/style.scss */
+/* line 718, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .animation-holder {
   display: none;
 }
-/* line 714, ../sass/style.scss */
+/* line 721, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container {
   display: none;
   padding: 2.4vw 4vh;
 }
-/* line 717, ../sass/style.scss */
+/* line 724, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .intro {
   padding-bottom: 6vh;
 }
-/* line 720, ../sass/style.scss */
+/* line 727, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .title-label {
   font-size: 1.8vw;
   display: block;
   padding-bottom: 0.3vh;
   letter-spacing: 0.05vw;
 }
-/* line 726, ../sass/style.scss */
+/* line 733, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .tag-lines {
   font-size: 2.4vw;
   display: block;
   padding-bottom: 2vh;
 }
-/* line 731, ../sass/style.scss */
+/* line 738, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .overview-label {
   font-size: 1.95vw;
   width: 54vw;
 }
-/* line 735, ../sass/style.scss */
+/* line 742, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .content-icon {
   height: 11.5vh;
 }
-/* line 738, ../sass/style.scss */
+/* line 745, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .col-3 {
   text-align: center;
   width: 33.3%;
   float: left;
   padding-bottom: 2vh;
 }
-/* line 744, ../sass/style.scss */
+/* line 751, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .content-superscript {
   vertical-align: top;
 }
-/* line 747, ../sass/style.scss */
+/* line 754, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .top-content-labels {
   text-transform: uppercase;
   font-size: 1.6vw;
 }
-/* line 751, ../sass/style.scss */
+/* line 758, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .column-one {
   color: #fed11c;
   font-size: 5.3vw;
 }
-/* line 755, ../sass/style.scss */
+/* line 762, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .column-one.content-superscript, .ipos-wrapper .featured-area .featured-content .content-container .column-two.content-superscript, .ipos-wrapper .featured-area .featured-content .content-container .column-three.content-superscript {
   font-size: 3vw;
 }
-/* line 758, ../sass/style.scss */
+/* line 765, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .column-two {
   color: #a7ce37;
   font-size: 5.3vw;
 }
-/* line 762, ../sass/style.scss */
+/* line 769, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .column-three {
   font-size: 5.3vw;
   color: #82d3f5;
 }
-/* line 766, ../sass/style.scss */
+/* line 773, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .col-3 img {
   max-height: 11.5vh;
 }
-/* line 772, ../sass/style.scss */
+/* line 779, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .copyright {
   font-size: 1.1vw;
   vertical-align: super;
 }
-/* line 776, ../sass/style.scss */
+/* line 783, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .content-headers {
   width: 33.33%;
   float: left;
   text-align: center;
   font-size: 1.7vw;
 }
-/* line 782, ../sass/style.scss */
+/* line 789, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .separator {
   width: 55%;
   height: 1px;
   background: #000;
   margin: 3vh 0vw 1vh 4.6vw;
 }
-/* line 788, ../sass/style.scss */
+/* line 795, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .orange {
   background: #fed11c;
 }
-/* line 791, ../sass/style.scss */
+/* line 798, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .green {
   background: #a7ce37;
 }
-/* line 794, ../sass/style.scss */
+/* line 801, ../sass/style.scss */
 .ipos-wrapper .featured-area .featured-content .content-container .blue {
   background: #82d3f5;
 }
 
-/* line 802, ../sass/style.scss */
+/* line 809, ../sass/style.scss */
 .compare-container {
   top: 14.4vh;
   position: fixed;
   z-index: 1000;
 }
 @media screen and (orientation: portrait) {
-  /* line 802, ../sass/style.scss */
+  /* line 809, ../sass/style.scss */
   .compare-container {
     top: 15.35vh;
   }
 }
-/* line 809, ../sass/style.scss */
+/* line 816, ../sass/style.scss */
 .compare-container img {
   height: 82.4vh;
   width: 97.75vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 809, ../sass/style.scss */
+  /* line 816, ../sass/style.scss */
   .compare-container img {
     height: 82.9vh;
     width: 96.4vw;
   }
 }
 
-/* line 819, ../sass/style.scss */
-.ipos-wrapper .featured-area .featured-content .swiper-slide img.nav2-icon {
-  height: 60%;
-  vertical-align: middle;
-  width: auto;
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* line 827, ../sass/style.scss */
+.home-container .home-intro {
+  margin: 3vh 3vw 6vh;
 }
-
 /* line 829, ../sass/style.scss */
-.swiper-slide p {
-  text-align: center;
+.home-container .home-intro h1 {
+  font-size: 2.6vh;
+  margin-bottom: 1vh;
 }
-
-/*
-BELOW THIS LINE IS SWIPER CODE FOR THE CAROUSEL
----------------------------------------------------------------------- */
-/*
- * Swiper - Mobile Touch Slider CSS
- * http://www.idangero.us/sliders/swiper
- *
- * Vladimir Kharlampidi, The iDangero.us
- * http://www.idangero.us/
- * 
- * Copyright 2012-2013, Vladimir Kharlampidi
- * The iDangero.us
- * http://www.idangero.us
- *
- * Licensed under GPL & MIT
- *
-*/
-/* ===============================================================
-Basic Swiper Styles 
-================================================================*/
-/* line 855, ../sass/style.scss */
-.swiper-container {
-  backface-visibility: hidden;
+/* line 833, ../sass/style.scss */
+.home-container .home-intro h2 {
+  font-size: 4vh;
+}
+/* line 837, ../sass/style.scss */
+.home-container .slide-holder {
   margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  -ms-backface-visibility: hidden;
+  width: 66.625vw;
 }
-
-/* line 863, ../sass/style.scss */
-.swiper-wrapper {
-  position: relative;
-  transition-property: transform, left, top;
-  transition-duration: 0s;
-  transform: translate3d(0px, 0, 0);
-  transition-timing-function: ease;
-  width: 100%;
-  -ms-transition-property: -ms-transform, left, top;
-  -ms-transition-duration: 0s;
-  -ms-transform: translate3d(0px, 0, 0);
-  -ms-transition-timing-function: ease;
-  -ms-perspective-origin: 0px;
-}
-
-/* line 876, ../sass/style.scss */
-.swiper-free-mode > .swiper-wrapper {
-  transition-timing-function: ease-out;
-  margin: 0 auto;
-  -ms-transition-timing-function: ease-out;
-}
-
-/* line 881, ../sass/style.scss */
-.swiper-slide {
+/* line 841, ../sass/style.scss */
+.home-container .slide {
   float: left;
-}
-
-/* IE10 Windows Phone 8 Fixes */
-/* line 886, ../sass/style.scss */
-.swiper-wp8-horizontal {
-  -ms-touch-action: pan-y;
-}
-
-/* line 889, ../sass/style.scss */
-.swiper-wp8-vertical {
-  -ms-touch-action: pan-x;
-}
-
-/* ===============================================================
-3D
-================================================================*/
-/* line 897, ../sass/style.scss */
-.swiper-container, .swiper-wrapper, .swiper-slide {
-  transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-}
-
-/* line 901, ../sass/style.scss */
-.swiper-container {
-  perspective: 1200px;
-  -ms-perspective: 1200px;
-}
-
-/* line 905, ../sass/style.scss */
-.swiper-wrapper {
-  /* Windows 8 IE 10 fix */
-  -ms-perspective-origin: 0px;
-}
-
-/* line 911, ../sass/style.scss */
-.swiper-slide-shadow-left, .swiper-slide-shadow-right, .swiper-slide-shadow-top, .swiper-slide-shadow-bottom {
-  height: 100%;
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-/* line 919, ../sass/style.scss */
-.swiper-slide-shadow-left {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
-}
-
-/* line 922, ../sass/style.scss */
-.swiper-slide-shadow-right {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
-}
-
-/* line 925, ../sass/style.scss */
-.swiper-slide-shadow-top {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-
-/* line 928, ../sass/style.scss */
-.swiper-slide-shadow-bottom {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-
-/* ===============================================================
-Custom carousel styles
-================================================================*/
-/* line 935, ../sass/style.scss */
-.swiper-container {
-  height: 35vh;
-  padding: 17.5vh 0;
+  height: 20vw;
+  margin-left: 1.125vw;
+  width: 20.70833vw;
 }
 @media screen and (orientation: portrait) {
-  /* line 935, ../sass/style.scss */
-  .swiper-container {
-    height: 19.44444vh;
-    padding: 9vh 0;
+  /* line 841, ../sass/style.scss */
+  .home-container .slide {
+    margin-left: 1.125vw;
   }
 }
-
-/* line 943, ../sass/style.scss */
-.swiper-slide {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyZDNmNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYWRlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #82d3f5), color-stop(100%, #00adef));
-  background-image: -moz-linear-gradient(#82d3f5, #00adef);
-  background-image: -webkit-linear-gradient(#82d3f5, #00adef);
-  background-image: linear-gradient(#82d3f5, #00adef);
-}
-
-/* line 946, ../sass/style.scss */
-.swiper-slide-active + div {
-  /* @include background-image($orange-gradient); */
-  z-index: 10000 !important;
-}
-
-/* line 950, ../sass/style.scss */
-.swiper-container .swiper-slide .slide-label {
-  font-size: 3vh;
-  margin-top: 37vh;
+/* line 849, ../sass/style.scss */
+.home-container .slide p {
+  position: relative;
   text-align: center;
+  top: 14vh;
 }
 @media screen and (orientation: portrait) {
-  /* line 950, ../sass/style.scss */
-  .swiper-container .swiper-slide .slide-label {
-    margin-top: 21.875vh;
+  /* line 849, ../sass/style.scss */
+  .home-container .slide p {
+    top: 6vh;
   }
+}
+/* line 857, ../sass/style.scss */
+.home-container .slide img {
+  margin: 4.14167vw 0 0 5.17708vw;
+  max-width: 10.35417vw;
+  position: relative;
 }
 
 /* ===============================================================
 Start Button 3d transform effect
 ================================================================*/
-/* line 963, ../sass/style.scss */
+/* line 869, ../sass/style.scss */
 .menu-item-container {
   width: 100%;
   height: 100%;
@@ -1250,7 +1131,7 @@ Start Button 3d transform effect
   margin: 0px auto;
 }
 
-/* line 970, ../sass/style.scss */
+/* line 876, ../sass/style.scss */
 .features-nav-item {
   width: 100%;
   height: 100%;
@@ -1260,22 +1141,22 @@ Start Button 3d transform effect
   transition: all 0.2s ease-out;
 }
 
-/* line 979, ../sass/style.scss */
+/* line 885, ../sass/style.scss */
 .menu-item-front {
   transform: rotateX(0deg);
 }
 
-/* line 983, ../sass/style.scss */
+/* line 889, ../sass/style.scss */
 .menu-item-back {
   transform: rotateX(-90deg);
   top: 100% !important;
 }
 
-/* line 990, ../sass/style.scss */
+/* line 896, ../sass/style.scss */
 .menu-item:hover .menu-item-container .menu-item-front {
   transform: rotateX(-90deg) translateY(-100%);
 }
-/* line 993, ../sass/style.scss */
+/* line 899, ../sass/style.scss */
 .menu-item:hover .menu-item-container .menu-item-back {
   transform: rotateX(0deg) translateY(-100%);
 }
