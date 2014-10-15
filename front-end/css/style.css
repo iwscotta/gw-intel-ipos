@@ -314,8 +314,7 @@ img {
 @media screen and (orientation: portrait) {
   /* line 241, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .features-nav .info-card.show {
-    /*dmoxin*/
-    bottom: 65.4vh;
+    bottom: 11vh;
   }
 }
 /* line 247, ../sass/style.scss */

@@ -240,8 +240,8 @@ img {
         }
         &.show {
         	bottom: $horizontal-single-item-height + $vertical-spacer*2;
-        	@media screen and (orientation: portrait) { /*dmoxin*/
-        		bottom:$horizontal-single-item-height + $vertical-spacer*2.5 + $featured-area-portrait-height;
+        	@media screen and (orientation: portrait) {
+        		bottom: 11vh;
         	}
         }
         .info-card-prod {
