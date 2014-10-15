@@ -297,7 +297,7 @@ img {
   height: 68vh;
   margin: 0px;
   position: absolute;
-  top: 100%;
+  bottom: -70vh;
   transition: 1s;
   width: 30vw;
 }
@@ -309,13 +309,13 @@ img {
 }
 /* line 241, ../sass/style.scss */
 .ipos-wrapper .feature-navigation-area .features-nav .info-card.show {
-  top: 16.4vh;
+  bottom: 16.4vh;
 }
 @media screen and (orientation: portrait) {
   /* line 241, ../sass/style.scss */
   .ipos-wrapper .feature-navigation-area .features-nav .info-card.show {
     /*dmoxin*/
-    top: 65.4vh;
+    bottom: 65.4vh;
   }
 }
 /* line 247, ../sass/style.scss */

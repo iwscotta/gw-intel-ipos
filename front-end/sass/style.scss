@@ -232,16 +232,16 @@ img {
         height: 68vh;
         margin: 0px;
         position: absolute;
-        top:100%;
+        bottom: -70vh;
         transition: 1s;
         width: $feature-navigation-area-width;
         @media screen and (orientation: portrait) {  
           width: 97vw;
         }
         &.show {
-        	top: $horizontal-single-item-height + $vertical-spacer*2;
+        	bottom: $horizontal-single-item-height + $vertical-spacer*2;
         	@media screen and (orientation: portrait) { /*dmoxin*/
-        		top:$horizontal-single-item-height + $vertical-spacer*2.5 + $featured-area-portrait-height;
+        		bottom:$horizontal-single-item-height + $vertical-spacer*2.5 + $featured-area-portrait-height;
         	}
         }
         .info-card-prod {
