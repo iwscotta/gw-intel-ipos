@@ -231,7 +231,7 @@ img {
         background: #fff;
         height: 68vh;
         margin: 0px;
-        position: relative;
+        position: absolute;
         bottom: -70vh;
         transition: 1s;
         width: $feature-navigation-area-width;
@@ -239,9 +239,9 @@ img {
           width: 97vw;
         }
         &.show {
-        	bottom: 68vh;
+        	bottom: $horizontal-single-item-height + $vertical-spacer*2;
         	@media screen and (orientation: portrait) {
-        		bottom: 33vh;
+        		bottom: 11vh;
         	}
         }
         .info-card-prod {
